@@ -1,0 +1,14 @@
+metric,beeadhoc,aodv
+pdr_pct,0,56.9042
+throughput_kbps,0,8.37136
+delay_avg_ms,0,4.19344
+delay_90pct_ms,0,7.35818
+delay_95pct_ms,0,11.4116
+delay_100pct_ms,0,11.4116
+energy_consumed_J,1.82528,3.18306
+energy_per_kB_mJkB,0,30.4185
+remaining_energy_pct,99.6349,99.3634
+tx_packets,1995,2035
+rx_packets,0,1158
+tx_bytes,183540,185264
+rx_bytes,0,104642
