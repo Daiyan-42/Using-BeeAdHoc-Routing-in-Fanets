@@ -523,6 +523,47 @@ bool BeeAdHocRoutingProtocol::IsMyAddress(Ipv4Address addr) const {
     return false;
 }
 
+bool BeeAdHocRoutingProtocol::ResolveNextHop(const std::vector<Ipv4Address>& route,
+                                             Ipv4Address& nextHop) const
+{
+    const Ipv4Address myAddr = GetLocalAddress();
+    auto it = std::find(route.begin(), route.end(), myAddr);
+    if (it == route.end()) {
+        return false;
+    }
+
+    ++it;
+    if (it == route.end()) {
+        return false;
+    }
+
+    nextHop = *it;
+    return true;
+}
+
+void BeeAdHocRoutingProtocol::InstallForagerForCurrentNode(
+    Ipv4Address dst,
+    const std::vector<Ipv4Address>& route,
+    ForagerType type,
+    double quality,
+    uint32_t danceNum)
+{
+    Ipv4Address nextHop;
+    if (!ResolveNextHop(route, nextHop)) {
+        return;
+    }
+
+    ForagerEntry fe;
+    fe.dst = dst;
+    fe.route = route;
+    fe.type = type;
+    fe.quality = quality;
+    fe.danceNum = danceNum;
+    fe.createdAt = Simulator::Now();
+    fe.lifetime = Seconds(30);
+    m_danceFloor.AddForager(fe);
+}
+
 double BeeAdHocRoutingProtocol::GetResidualEnergy() const {
     // Energy container is aggregated on the Node, not on this protocol object
     Ptr<Node> node = m_ipv4->GetObject<Node>();
@@ -576,7 +617,16 @@ void BeeAdHocRoutingProtocol::SendControlUnicast(
     // bound with Ipv4Address::GetAny() and SetAllowBroadcast(true) the UDP/IP
     // stack will accept the SendTo() even without a routing entry; the WiFi
     // MAC handles the L2 unicast to nextHop within the same subnet.
+    m_controlBypassCount[nextHop]++;
     int result = m_socket->SendTo(ctrl, 0, InetSocketAddress(nextHop, m_port));
+    auto it = m_controlBypassCount.find(nextHop);
+    if (it != m_controlBypassCount.end()) {
+        if (it->second <= 1) {
+            m_controlBypassCount.erase(it);
+        } else {
+            --it->second;
+        }
+    }
     (void) result;
 }
 
@@ -598,10 +648,13 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::RouteOutput(
 
     // Check dance floor — do we have a forager for this destination?
     ForagerEntry fe;
-    if (m_danceFloor.GetForager(dst, fe) && fe.route.size() >= 2) {
+    Ipv4Address nextHop;
+    if (m_danceFloor.GetForager(dst, fe) &&
+        ResolveNextHop(fe.route, nextHop))
+    {
         SendForager(fe);
         sockerr = Socket::ERROR_NOTERROR;
-        return BuildRoute(dst, fe.route[1]);
+        return BuildRoute(dst, nextHop);
     }
 
     // *** FIX: same-subnet direct delivery ***
@@ -614,35 +667,29 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::RouteOutput(
     // directly — just hand back a direct route so the IP stack forwards it.
     // This only applies to same-subnet neighbors (backward scouts, swarms,
     // forager probes). Multi-hop data flows still go through the DanceFloor.
-    for (uint32_t i = 1; i < m_ipv4->GetNInterfaces(); i++) {
-        for (uint32_t j = 0; j < m_ipv4->GetNAddresses(i); j++) {
-            Ipv4InterfaceAddress ifAddr = m_ipv4->GetAddress(i, j);
-            if (ifAddr.IsInSameSubnet(dst)) {
-                Ptr<Ipv4Route> rt = BuildRoute(dst, dst); // direct, no gateway
-                if (rt) {
-                    sockerr = Socket::ERROR_NOTERROR;
-                    return rt;
+    auto bypassIt = m_controlBypassCount.find(dst);
+    if (bypassIt != m_controlBypassCount.end() && bypassIt->second > 0) {
+        for (uint32_t i = 1; i < m_ipv4->GetNInterfaces(); i++) {
+            for (uint32_t j = 0; j < m_ipv4->GetNAddresses(i); j++) {
+                Ipv4InterfaceAddress ifAddr = m_ipv4->GetAddress(i, j);
+                if (ifAddr.IsInSameSubnet(dst)) {
+                    Ptr<Ipv4Route> rt = BuildRoute(dst, dst); // direct, no gateway
+                    if (rt) {
+                        sockerr = Socket::ERROR_NOTERROR;
+                        return rt;
+                    }
                 }
             }
         }
     }
 
-    if (p) {
-        PackerEntry pe;
-        pe.packet      = p->Copy();
-        pe.ipHdr       = header;
-        // Ensure source address is set — NS-3 sometimes passes 0.0.0.0
-        // at RouteOutput time and fills it in later; we need it now for SendWithHeader.
-        if (pe.ipHdr.GetSource().IsAny() ||
-            pe.ipHdr.GetSource() == Ipv4Address("0.0.0.0")) {
-            pe.ipHdr.SetSource(GetLocalAddress());
-        }
-        pe.createdAt   = Simulator::Now();
-        pe.waitTimeout = m_packerTimeout;
-        // ucb is not available in RouteOutput — left as null, DrainPackerQueue
-        // will use SendWithHeader with a pre-built route instead.
-        m_packerQueue[dst].push_back(pe);
-    }
+    // Do not buffer source-originated packets here. RouteOutput is invoked
+    // before the transport packet is fully serialized for re-injection, so a
+    // later SendWithHeader() path can lose the UDP header and produce a packet
+    // that never reaches the application sink. We only trigger discovery here;
+    // once a forager is installed, the next app packet will travel through the
+    // normal UDP stack with a valid RouteOutput hit.
+    (void) p;
 
     if (m_scoutPending.find(dst) == m_scoutPending.end() ||
         Simulator::Now() > m_scoutPending[dst])
@@ -683,8 +730,11 @@ bool BeeAdHocRoutingProtocol::RouteInput(
     }
 
     ForagerEntry fe;
-    if (m_danceFloor.GetForager(dst, fe) && fe.route.size() >= 2) {
-        Ptr<Ipv4Route> rt = BuildRoute(dst, fe.route[1]);
+    Ipv4Address nextHop;
+    if (m_danceFloor.GetForager(dst, fe) &&
+        ResolveNextHop(fe.route, nextHop))
+    {
+        Ptr<Ipv4Route> rt = BuildRoute(dst, nextHop);
         if (rt) {
             ucb(rt, p, header);
             return true;
@@ -711,8 +761,11 @@ void BeeAdHocRoutingProtocol::PackingFloorReceive(
 
     // Check dance floor immediately - if route known, forward via NS-3 ucb
     ForagerEntry fe;
-    if (m_danceFloor.GetForager(dst, fe) && fe.route.size() >= 2) {
-        Ptr<Ipv4Route> rt = BuildRoute(dst, fe.route[1]);
+    Ipv4Address nextHop;
+    if (m_danceFloor.GetForager(dst, fe) &&
+        ResolveNextHop(fe.route, nextHop))
+    {
+        Ptr<Ipv4Route> rt = BuildRoute(dst, nextHop);
         if (rt && !ucb.IsNull()) {
             NS_LOG_DEBUG("BeeAdHoc PackingFloor: route known, forwarding via ucb");
             ucb(rt, p, hdr);
@@ -755,13 +808,16 @@ void BeeAdHocRoutingProtocol::DrainPackerQueue(Ipv4Address dst) {
     // one, matching the "clone and send" semantics described in the paper.
     for (auto& pe : it->second) {
         ForagerEntry fe;
-        if (!m_danceFloor.GetForager(dst, fe) || fe.route.size() < 2) {
+        Ipv4Address nextHop;
+        if (!m_danceFloor.GetForager(dst, fe) ||
+            !ResolveNextHop(fe.route, nextHop))
+        {
             if (!pe.ecb.IsNull())
                 pe.ecb(pe.packet, pe.ipHdr, Socket::ERROR_NOROUTETOHOST);
             continue;
         }
 
-        Ptr<Ipv4Route> rt = BuildRoute(dst, fe.route[1]);
+        Ptr<Ipv4Route> rt = BuildRoute(dst, nextHop);
         if (!rt || !rt->GetOutputDevice()) {
             continue;
         }
@@ -992,24 +1048,17 @@ void BeeAdHocRoutingProtocol::ProcessBackwardScout(
     Ipv4Address myAddr = GetLocalAddress();
 
     // Are we the original source?
+    const uint32_t danceNum = std::max(1u,
+        std::min(20u, (uint32_t)(bsh.GetAvgEnergy() / 20.0) + 1));
+    InstallForagerForCurrentNode(bsh.GetDst(),
+                                 bsh.GetRoute(),
+                                 bsh.GetType(),
+                                 bsh.GetAvgEnergy(),
+                                 danceNum);
+    DrainPackerQueue(bsh.GetDst());
+
     if (bsh.GetSrc() == myAddr) {
-        uint32_t danceNum = std::max(1u,
-            std::min(20u, (uint32_t)(bsh.GetAvgEnergy() / 20.0) + 1));
-
-        ForagerEntry fe;
-        fe.dst       = bsh.GetDst();
-        fe.route     = bsh.GetRoute();
-        fe.type      = bsh.GetType();
-        fe.quality   = bsh.GetAvgEnergy();
-        fe.danceNum  = danceNum;
-        fe.createdAt = Simulator::Now();
-        fe.lifetime  = Seconds(30);
-
-        m_danceFloor.AddForager(fe);
-
         m_scoutPending.erase(bsh.GetDst());
-
-        DrainPackerQueue(bsh.GetDst());
         return;
     }
 

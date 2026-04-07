@@ -414,6 +414,13 @@ private:
                                 const std::string& detail) const;
     Ipv4Address GetLocalAddress() const;
     bool        IsMyAddress(Ipv4Address addr) const;
+    bool        ResolveNextHop(const std::vector<Ipv4Address>& route,
+                               Ipv4Address& nextHop) const;
+    void        InstallForagerForCurrentNode(Ipv4Address dst,
+                                             const std::vector<Ipv4Address>& route,
+                                             ForagerType type,
+                                             double quality,
+                                             uint32_t danceNum);
     double      GetResidualEnergy() const;
     Ptr<Ipv4Route> BuildRoute(Ipv4Address dst, Ipv4Address nextHop) const;
 
@@ -498,6 +505,7 @@ private:
 
     // Pending scout launches (avoid duplicate discovery)
     std::map<Ipv4Address, Time> m_scoutPending;
+    std::map<Ipv4Address, uint32_t> m_controlBypassCount;
 
     Timer m_maintenanceTimer;
     Ipv4StaticRoutingHelper m_staticRoutingHelper;

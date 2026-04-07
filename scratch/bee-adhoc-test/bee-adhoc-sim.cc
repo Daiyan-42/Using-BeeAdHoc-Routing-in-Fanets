@@ -487,8 +487,8 @@ static void SaveCSV(const SimResults& bee, const SimResults& aodv,
 int main(int argc, char* argv[])
 {
     // ---- Simulation parameters ----
-    uint32_t nNodes     = 5;
-    double   areaX      = 800.0;
+    uint32_t nNodes     = 20;
+    double   areaX      = 2400.0;
     double   areaY      = 800.0;
     double   txRange    = 250.0;
     double   simTime    = 120.0;
