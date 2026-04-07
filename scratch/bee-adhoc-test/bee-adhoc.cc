@@ -20,55 +20,12 @@
 
 #include <algorithm>
 #include <cstring>
-#include <iomanip>
 #include <sstream>
 
 namespace ns3 {
 namespace beeadhoc {
 
 NS_LOG_COMPONENT_DEFINE("BeeAdHoc");
-
-// ============================================================
-// DEBUG INSTRUMENTATION  (grep by [TAG] to filter output)
-//   [ADDR]      GetLocalAddress result -- watch for 0.0.0.0
-//   [START]     Socket startup / bind
-//   [FLOOD]     Hello-flood broadcast
-//   [ROUTE_OUT] RouteOutput HIT / MISS
-//   [ROUTE_IN]  RouteInput transit handling
-//   [PACKER]    Buffer / drain / expire
-//   [SCOUT_TX]  Forward scout sent
-//   [SCOUT_RX]  Forward scout received / relayed / reached dst
-//   [BS_TX]     Backward scout sent
-//   [BS_RX]     Backward scout relayed
-//   [BS_DONE]   Backward scout reached source -> forager installed
-//   [DANCE]     DanceFloor forager added / fetched
-//   [UNICAST]   SendControlUnicast attempt / result
-//   [FORAGER]   Energy-probe forwarded / arrived
-//   [SWARM]     Swarm forwarded / arrived
-//   [MAINT]     Periodic stats dump (every 5 s)
-//   [FIX]       A bug-fix code path was triggered
-//   [DROP]      Packet silently discarded
-// ============================================================
-#ifdef BEE_ADHOC_SUPPRESS_DEBUG_PRINTS
-#define BEE_PRINT(tag, msg) do { } while (0)
-#else
-#define BEE_PRINT(tag, msg) \
-    std::cout << std::fixed << std::setprecision(3) \
-              << "[" << Simulator::Now().GetSeconds() << "s][" << tag << "] " \
-              << msg << "\n"
-#endif
-
-// ---- Global counters (all nodes share these for a sim-wide view) ----
-[[maybe_unused]] static uint32_t g_routeOutMiss   = 0;  // RouteOutput: no forager found
-[[maybe_unused]] static uint32_t g_packerBuffered = 0;  // packets ever buffered
-[[maybe_unused]] static uint32_t g_packerDrained  = 0;  // packets successfully sent after buffering
-[[maybe_unused]] static uint32_t g_packerExpired  = 0;  // packets dropped on timeout
-[[maybe_unused]] static uint32_t g_fsTx           = 0;  // forward scouts broadcast
-[[maybe_unused]] static uint32_t g_fsRx           = 0;  // forward scouts accepted (not dup/TTL/energy)
-[[maybe_unused]] static uint32_t g_bsTx           = 0;  // backward scouts sent
-[[maybe_unused]] static uint32_t g_bsRx           = 0;  // backward scouts that reached their source
-[[maybe_unused]] static uint32_t g_unicastOk      = 0;  // SendControlUnicast succeeded
-[[maybe_unused]] static uint32_t g_unicastFail    = 0;  // SendControlUnicast silently failed
 
 // ============================================================
 // ForwardScoutHeader
@@ -483,17 +440,11 @@ void BeeAdHocRoutingProtocol::SetIpv4(Ptr<Ipv4> ipv4) {
 
 void BeeAdHocRoutingProtocol::Start() {
     NS_LOG_FUNCTION(this << GetLocalAddress());
-    BEE_PRINT("START", "Start() at t=" << Simulator::Now().GetSeconds()
-              << "s  localAddr=" << GetLocalAddress()
-              << "  (0.0.0.0 here = interface not ready yet)");
 
     TypeId tid = TypeId::LookupByName("ns3::UdpSocketFactory");
     m_socket = Socket::CreateSocket(m_ipv4->GetObject<Node>(), tid);
     [[maybe_unused]] int bindRes =
         m_socket->Bind(InetSocketAddress(Ipv4Address::GetAny(), m_port));
-    BEE_PRINT("START", "Socket bind port=" << m_port
-              << " result=" << bindRes
-              << (bindRes == 0 ? " OK" : " FAILED -- RecvEntrance deaf"));
     m_socket->SetAllowBroadcast(true);
     m_socket->SetRecvCallback(
         MakeCallback(&BeeAdHocRoutingProtocol::RecvEntrance, this));
@@ -517,21 +468,16 @@ void BeeAdHocRoutingProtocol::Start() {
 // receives it will send a BackwardScout back to us, populating the dance floor.
 void BeeAdHocRoutingProtocol::FloodScout() {
     if (!m_socket) {
-        BEE_PRINT("FLOOD", "DROP: socket not ready at FloodScout");
         return;
     }
 
     // FIX (Bug 3): guard against launching a flood with src=0.0.0.0
     Ipv4Address myAddr = GetLocalAddress();
     if (myAddr == Ipv4Address("0.0.0.0")) {
-        BEE_PRINT("FLOOD", "DROP: localAddr=0.0.0.0 -- interface not ready."
-                  " Rescheduling FloodScout in 1s.");
         Simulator::Schedule(Seconds(1.0),
             &BeeAdHocRoutingProtocol::FloodScout, this);
         return;
     }
-
-    BEE_PRINT("FLOOD", "Hello-flood from " << myAddr);
 
     ForwardScoutHeader fsh;
     fsh.SetSrc(myAddr);
@@ -567,8 +513,6 @@ Ipv4Address BeeAdHocRoutingProtocol::GetLocalAddress() const {
     // BUG-ADDR: returning 0.0.0.0 means no WiFi interface has an IP yet.
     // Any scout launched now will embed src=0.0.0.0; when the backward scout
     // returns, bsh.GetSrc()==myAddr will NEVER match -> forager never installed.
-    BEE_PRINT("ADDR", "WARNING GetLocalAddress()=0.0.0.0 -- interface not ready."
-              " Scouts from this node will be corrupt and ignored.");
     return Ipv4Address("0.0.0.0");
 }
 
@@ -617,10 +561,7 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::BuildRoute(
 void BeeAdHocRoutingProtocol::SendControlUnicast(
     Ptr<Packet> ctrl, Ipv4Address nextHop)
 {
-    // ---- Instrumentation ----
     if (!m_socket || !m_ipv4) {
-        BEE_PRINT("DROP", "[UNICAST] socket/ipv4 null -> packet to " << nextHop << " lost");
-        g_unicastFail++;
         return;
     }
 
@@ -635,18 +576,8 @@ void BeeAdHocRoutingProtocol::SendControlUnicast(
     // bound with Ipv4Address::GetAny() and SetAllowBroadcast(true) the UDP/IP
     // stack will accept the SendTo() even without a routing entry; the WiFi
     // MAC handles the L2 unicast to nextHop within the same subnet.
-    BEE_PRINT("UNICAST", "Sending control packet to " << nextHop);
-
     int result = m_socket->SendTo(ctrl, 0, InetSocketAddress(nextHop, m_port));
-    if (result < 0) {
-        BEE_PRINT("DROP", "[UNICAST] SendTo() failed errno="
-                  << m_socket->GetErrno() << " nextHop=" << nextHop
-                  << " totalFail=" << ++g_unicastFail);
-    } else {
-        g_unicastOk++;
-        BEE_PRINT("UNICAST", "SendTo OK " << result << " bytes to " << nextHop
-                  << " totalOk=" << g_unicastOk);
-    }
+    (void) result;
 }
 
 // ---- RouteOutput — called by NS-3 when app wants to send ----
@@ -668,9 +599,6 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::RouteOutput(
     // Check dance floor — do we have a forager for this destination?
     ForagerEntry fe;
     if (m_danceFloor.GetForager(dst, fe) && fe.route.size() >= 2) {
-        BEE_PRINT("ROUTE_OUT", "HIT dst=" << dst
-                  << " nextHop=" << fe.route[1]
-                  << " danceNum=" << fe.danceNum);
         SendForager(fe);
         sockerr = Socket::ERROR_NOTERROR;
         return BuildRoute(dst, fe.route[1]);
@@ -692,19 +620,12 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::RouteOutput(
             if (ifAddr.IsInSameSubnet(dst)) {
                 Ptr<Ipv4Route> rt = BuildRoute(dst, dst); // direct, no gateway
                 if (rt) {
-                    BEE_PRINT("ROUTE_OUT", "DIRECT (same-subnet) dst=" << dst);
                     sockerr = Socket::ERROR_NOTERROR;
                     return rt;
                 }
             }
         }
     }
-    
-    // No forager found -- buffer and discover
-    g_routeOutMiss++;
-    BEE_PRINT("ROUTE_OUT", "MISS dst=" << dst
-              << " totalMisses=" << g_routeOutMiss
-              << " realPkt=" << (p ? "yes" : "no"));
 
     if (p) {
         PackerEntry pe;
@@ -721,22 +642,13 @@ Ptr<Ipv4Route> BeeAdHocRoutingProtocol::RouteOutput(
         // ucb is not available in RouteOutput — left as null, DrainPackerQueue
         // will use SendWithHeader with a pre-built route instead.
         m_packerQueue[dst].push_back(pe);
-        g_packerBuffered++;
-        BEE_PRINT("PACKER", "Buffered pkt dst=" << dst
-                  << " qSz=" << m_packerQueue[dst].size()
-                  << " timeout=" << m_packerTimeout.GetSeconds() << "s"
-                  << " totalBuffered=" << g_packerBuffered
-                  << " -- pkt dropped if BS not back in time");
     }
 
     if (m_scoutPending.find(dst) == m_scoutPending.end() ||
         Simulator::Now() > m_scoutPending[dst])
     {
         m_scoutPending[dst] = Simulator::Now() + Seconds(5.0);
-        BEE_PRINT("SCOUT_TX", "Triggering ForwardScout for dst=" << dst);
         LaunchForwardScout(dst, FORAGER_LIFETIME);
-    } else {
-        BEE_PRINT("ROUTE_OUT", "Scout already pending for dst=" << dst);
     }
 
     sockerr = Socket::ERROR_NOROUTETOHOST;
@@ -770,23 +682,13 @@ bool BeeAdHocRoutingProtocol::RouteInput(
         return true;
     }
 
-    // Transit packet — forward if we have a route
-    BEE_PRINT("ROUTE_IN", "Transit dst=" << dst
-              << " at=" << GetLocalAddress() << " checking DanceFloor");
     ForagerEntry fe;
     if (m_danceFloor.GetForager(dst, fe) && fe.route.size() >= 2) {
         Ptr<Ipv4Route> rt = BuildRoute(dst, fe.route[1]);
         if (rt) {
-            BEE_PRINT("ROUTE_IN", "Transit forward dst=" << dst
-                      << " via nextHop=" << fe.route[1]);
             ucb(rt, p, header);
             return true;
         }
-        BEE_PRINT("DROP", "ROUTE_IN BuildRoute null dst=" << dst
-                  << " nextHop=" << fe.route[1]);
-    } else {
-        BEE_PRINT("ROUTE_IN", "No forager for transit dst=" << dst
-                  << " -- buffering (unusual for transit)");
     }
 
     PackingFloorReceive(p, header, ucb, ecb);
@@ -851,13 +753,9 @@ void BeeAdHocRoutingProtocol::DrainPackerQueue(Ipv4Address dst) {
     // forager that carries it.  GetForager() is therefore called once per
     // packet so every forwarded packet decrements the dance number by exactly
     // one, matching the "clone and send" semantics described in the paper.
-    [[maybe_unused]] uint32_t dSent = 0, dFailed = 0;
     for (auto& pe : it->second) {
         ForagerEntry fe;
         if (!m_danceFloor.GetForager(dst, fe) || fe.route.size() < 2) {
-            dFailed++;
-            BEE_PRINT("DROP", "DRAIN no forager for dst=" << dst
-                      << " -- packet dropped (danceNum exhausted or expired)");
             if (!pe.ecb.IsNull())
                 pe.ecb(pe.packet, pe.ipHdr, Socket::ERROR_NOROUTETOHOST);
             continue;
@@ -865,31 +763,17 @@ void BeeAdHocRoutingProtocol::DrainPackerQueue(Ipv4Address dst) {
 
         Ptr<Ipv4Route> rt = BuildRoute(dst, fe.route[1]);
         if (!rt || !rt->GetOutputDevice()) {
-            dFailed++;
-            BEE_PRINT("DROP", "DRAIN BuildRoute null dst=" << dst
-                      << " nextHop=" << fe.route[1]);
             continue;
         }
 
         if (!pe.ucb.IsNull()) {
-            BEE_PRINT("PACKER", "DRAIN via ucb dst=" << dst
-                      << " nextHop=" << fe.route[1]);
             pe.ucb(rt, pe.packet, pe.ipHdr);
-            dSent++;
         } else {
-            BEE_PRINT("PACKER", "DRAIN via SendWithHeader dst=" << dst
-                      << " nextHop=" << fe.route[1]
-                      << " src=" << pe.ipHdr.GetSource());
             Ptr<Packet> pkt = pe.packet->Copy();
             m_ipv4->SendWithHeader(pkt, pe.ipHdr, rt);
-            dSent++;
         }
-        g_packerDrained++;
         SendForager(fe);
     }
-    BEE_PRINT("PACKER", "DRAIN DONE dst=" << dst
-              << " sent=" << dSent << " failed=" << dFailed
-              << " totalDrained=" << g_packerDrained);
     m_packerQueue.erase(it);
     m_scoutPending.erase(dst);
 }
@@ -900,13 +784,6 @@ void BeeAdHocRoutingProtocol::CheckPackerQueue() {
     for (auto& [dst, list] : m_packerQueue) {
         list.remove_if([&](const PackerEntry& pe) {
             if ((now - pe.createdAt) > pe.waitTimeout) {
-                g_packerExpired++;
-                BEE_PRINT("DROP", "Packer EXPIRED dst=" << dst
-                          << " age=" << (now-pe.createdAt).GetSeconds() << "s"
-                          << " timeout=" << pe.waitTimeout.GetSeconds() << "s"
-                          << " totalExpired=" << g_packerExpired
-                          << " totalBuffered=" << g_packerBuffered
-                          << " -- ROOT CAUSE: scout RTT > packer timeout");
                 if (!pe.ecb.IsNull())
                     pe.ecb(pe.packet, pe.ipHdr, Socket::ERROR_NOROUTETOHOST);
                 return true;
@@ -942,10 +819,6 @@ void BeeAdHocRoutingProtocol::RecvEntrance(Ptr<Socket> socket) {
         uint8_t typeBuf[1];
         p->CopyData(typeBuf, 1);
         p->RemoveAtStart(1);
-
-        BEE_PRINT("SCOUT_RX", "RecvEntrance at=" << GetLocalAddress()
-                  << " pktType=" << (int)typeBuf[0]
-                  << " (1=FS 2=BS 3=Forager 4=Swarm)"                  << " size=" << (p->GetSize()+1) << "B");
 
         switch ((BeePacketType)typeBuf[0]) {
             case PKT_FORWARD_SCOUT: {
@@ -992,22 +865,17 @@ void BeeAdHocRoutingProtocol::LaunchForwardScout(
     NS_LOG_FUNCTION(this << dst);
 
     if (!m_socket) {
-        BEE_PRINT("SCOUT_TX", "DROP: socket not ready in LaunchForwardScout");
         return;
     }
 
     double myEnergy = GetResidualEnergy();
     if (myEnergy < m_energyThreshold) {
-        BEE_PRINT("SCOUT_TX", "DROP: energy too low (" << myEnergy
-                  << " J < " << m_energyThreshold << " J)");
         return;
     }
 
     // FIX (Bug 3): abort if local address is still 0.0.0.0
     Ipv4Address myAddr = GetLocalAddress();
     if (myAddr == Ipv4Address("0.0.0.0")) {
-        BEE_PRINT("SCOUT_TX", "DROP: localAddr=0.0.0.0 -- interface not ready."
-                  " Scout to " << dst << " aborted to prevent corrupt route.");
         return;
     }
 
@@ -1023,13 +891,6 @@ void BeeAdHocRoutingProtocol::LaunchForwardScout(
 
     ScoutId sid; sid.src = fsh.GetSrc(); sid.seqno = fsh.GetSeqno();
     MarkSeen(sid);
-    g_fsTx++;
-    BEE_PRINT("SCOUT_TX", "ForwardScout: src=" << myAddr
-              << " dst=" << dst
-              << " seq=" << fsh.GetSeqno()
-              << " ttl=" << (int)fsh.GetTtl()
-              << " energy=" << myEnergy
-              << " totalFsTx=" << g_fsTx);
 
     Ptr<Packet> pkt = Create<Packet>();
     pkt->AddHeader(fsh);
@@ -1050,34 +911,20 @@ void BeeAdHocRoutingProtocol::ProcessForwardScout(
     // Ignore if we sent this (normal -- we see our own broadcast)
     if (fsh.GetSrc() == myAddr) return;
 
-    BEE_PRINT("SCOUT_RX", "ForwardScout at=" << myAddr
-              << " src=" << fsh.GetSrc()
-              << " dst=" << fsh.GetDst()
-              << " seq=" << fsh.GetSeqno()
-              << " ttl=" << (int)fsh.GetTtl()
-              << " hops=" << (int)fsh.GetHopCount());
-
     ScoutId sid; sid.src = fsh.GetSrc(); sid.seqno = fsh.GetSeqno();
     if (IsDuplicateScout(sid)) {
-        BEE_PRINT("DROP", "FS duplicate at=" << myAddr
-                  << " src=" << fsh.GetSrc() << " seq=" << fsh.GetSeqno());
         return;
     }
     MarkSeen(sid);
 
     if (fsh.TtlExpired()) {
-        BEE_PRINT("DROP", "FS TTL=0 at=" << myAddr
-                  << " src=" << fsh.GetSrc() << " seq=" << fsh.GetSeqno());
         return;
     }
 
     double myEnergy = GetResidualEnergy();
     if (myEnergy < m_energyThreshold) {
-        BEE_PRINT("DROP", "FS energy-gate at=" << myAddr
-                  << " energy=" << myEnergy << " threshold=" << m_energyThreshold);
         return;
     }
-    g_fsRx++;
 
     fsh.SetTotalEnergy(fsh.GetTotalEnergy() + myEnergy);
     fsh.AddHop(myAddr);
@@ -1085,11 +932,6 @@ void BeeAdHocRoutingProtocol::ProcessForwardScout(
 
     bool isHelloFlood = fsh.GetDst().IsBroadcast();
     if (fsh.GetDst() == myAddr || isHelloFlood) {
-        BEE_PRINT("SCOUT_RX", "FS REACHED DST at=" << myAddr
-                  << " isHelloFlood=" << isHelloFlood
-                  << " src=" << fsh.GetSrc()
-                  << " avgEnergy=" << fsh.GetAvgEnergy()
-                  << " -- sending BackwardScout");
         SendBackwardScout(fsh);
         // FIX (Bug 1): For hello floods, do NOT rebroadcast. The original code
         // rebroadcast hello floods, creating an exponential control-packet storm
@@ -1098,9 +940,6 @@ void BeeAdHocRoutingProtocol::ProcessForwardScout(
         // getting through. Normal unicast scouts ARE rebroadcast as usual.
         return;
     }
-
-    BEE_PRINT("SCOUT_RX", "FS relaying at=" << myAddr
-              << " toward dst=" << fsh.GetDst());
 
     Ptr<Packet> pkt = Create<Packet>();
     pkt->AddHeader(fsh);
@@ -1115,13 +954,10 @@ void BeeAdHocRoutingProtocol::ProcessForwardScout(
 void BeeAdHocRoutingProtocol::SendBackwardScout(const ForwardScoutHeader& fsh) {
     std::vector<Ipv4Address> route = fsh.GetRoute();
     if (route.empty()) {
-        BEE_PRINT("DROP", "SendBackwardScout: route EMPTY, cannot reply"
-                  " to src=" << fsh.GetSrc());
         return;
     }
 
     double avgEnergy = fsh.GetAvgEnergy();
-    g_bsTx++;
 
     BackwardScoutHeader bsh;
     bsh.SetSrc(fsh.GetSrc());
@@ -1141,21 +977,6 @@ void BeeAdHocRoutingProtocol::SendBackwardScout(const ForwardScoutHeader& fsh) {
         nextHop = route[0];
     }
 
-    // Build route string for diagnosis
-    std::ostringstream rs;
-    for (size_t i = 0; i < route.size(); i++) {
-        rs << route[i];
-        if (i + 1 < route.size()) rs << "->";
-    }
-    BEE_PRINT("BS_TX", "BackwardScout: bshSrc=" << bsh.GetSrc()
-              << " bshDst=" << bsh.GetDst()
-              << " nextHop=" << nextHop
-              << " avgE=" << avgEnergy
-              << " routeIdx=" << (int)bsh.GetRouteIndex()
-              << " route=[" << rs.str() << "]"
-              << " totalBsTx=" << g_bsTx
-              << " (0.0.0.0 in route = BS will be lost)");
-
     Ptr<Packet> pkt = Create<Packet>();
     pkt->AddHeader(bsh);
     uint8_t t = PKT_BACKWARD_SCOUT;
@@ -1170,16 +991,8 @@ void BeeAdHocRoutingProtocol::ProcessBackwardScout(
 {
     Ipv4Address myAddr = GetLocalAddress();
 
-    BEE_PRINT("BS_RX", "BackwardScout at=" << myAddr
-              << " bshSrc=" << bsh.GetSrc()
-              << " bshDst=" << bsh.GetDst()
-              << " routeIdx=" << (int)bsh.GetRouteIndex()
-              << " avgE=" << bsh.GetAvgEnergy()
-              << " srcMatch=" << (bsh.GetSrc()==myAddr ? "YES->install" : "NO->relay"));
-
     // Are we the original source?
     if (bsh.GetSrc() == myAddr) {
-        g_bsRx++;
         uint32_t danceNum = std::max(1u,
             std::min(20u, (uint32_t)(bsh.GetAvgEnergy() / 20.0) + 1));
 
@@ -1194,24 +1007,7 @@ void BeeAdHocRoutingProtocol::ProcessBackwardScout(
 
         m_danceFloor.AddForager(fe);
 
-        BEE_PRINT("BS_DONE", "BackwardScout REACHED SOURCE at=" << myAddr
-                  << " dst=" << fe.dst
-                  << " nextHop=" << (fe.route.size()>1 ? fe.route[1] : Ipv4Address("0.0.0.0"))
-                  << " avgE=" << fe.quality
-                  << " danceNum=" << fe.danceNum
-                  << " totalBsRx=" << g_bsRx);
-        BEE_PRINT("DANCE", "ForagerEntry installed: dst=" << fe.dst
-                  << " nextHop=" << (fe.route.size()>1 ? fe.route[1] : Ipv4Address("0.0.0.0"))
-                  << " quality=" << fe.quality
-                  << " danceNum=" << fe.danceNum);
-
         m_scoutPending.erase(bsh.GetDst());
-
-        [[maybe_unused]] uint32_t qSz = m_packerQueue.count(bsh.GetDst()) ?
-            (uint32_t)m_packerQueue.at(bsh.GetDst()).size() : 0u;
-        BEE_PRINT("PACKER", "DrainPackerQueue for dst=" << bsh.GetDst()
-                  << " waitingPackets=" << qSz
-                  << (qSz==0 ? " -- WARNING: queue empty, packets may have expired!" : ""));
 
         DrainPackerQueue(bsh.GetDst());
         return;
@@ -1220,25 +1016,16 @@ void BeeAdHocRoutingProtocol::ProcessBackwardScout(
     // Intermediate relay
     int8_t idx = (int8_t)bsh.GetRouteIndex();
     if (idx <= 0) {
-        BEE_PRINT("DROP", "BS routeIndex<=0 at NON-SOURCE=" << myAddr
-                  << " bshSrc=" << bsh.GetSrc()
-                  << " -- malformed, dropping");
         return;
     }
 
     const auto& route = bsh.GetRoute();
     if ((size_t)idx >= route.size()) {
-        BEE_PRINT("DROP", "BS routeIndex=" << (int)idx
-                  << " OOB routeSize=" << route.size()
-                  << " at=" << myAddr << " -- dropping");
         return;
     }
 
     Ipv4Address nextHop = route[(uint8_t)(idx - 1)];
     bsh.SetRouteIndex((uint8_t)(idx - 1));
-
-    BEE_PRINT("BS_RX", "BS relay at=" << myAddr
-              << " idx=" << (int)idx << " nextHop=" << nextHop);
 
     Ptr<Packet> pkt = Create<Packet>();
     pkt->AddHeader(bsh);
@@ -1469,22 +1256,6 @@ void BeeAdHocRoutingProtocol::PeriodicMaintenance() {
     CheckSwarmBalance();
 
     m_maintenanceTick++;
-
-    // Print sim-wide aggregate stats every 5 seconds
-    if (m_maintenanceTick % 5 == 0) {
-        BEE_PRINT("MAINT", "=== STATS t=" << Simulator::Now().GetSeconds()
-                  << " fsTx=" << g_fsTx
-                  << " fsRx=" << g_fsRx
-                  << " bsTx=" << g_bsTx
-                  << " bsRx=" << g_bsRx
-                  << " ucastOk=" << g_unicastOk
-                  << " ucastFail=" << g_unicastFail
-                  << " buffered=" << g_packerBuffered
-                  << " drained=" << g_packerDrained
-                  << " expired=" << g_packerExpired
-                  << " routeMiss=" << g_routeOutMiss
-                  << " KEY: ucastFail>0=BS broken; expired>>drained=timeout short ===");
-    }
 
     // Re-flood hello scout every 10s
     if (m_maintenanceTick % 10 == 0) {
