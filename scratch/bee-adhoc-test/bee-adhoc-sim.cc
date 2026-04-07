@@ -487,14 +487,14 @@ static void SaveCSV(const SimResults& bee, const SimResults& aodv,
 int main(int argc, char* argv[])
 {
     // ---- Simulation parameters ----
-    uint32_t nNodes     = 20;
-    double   areaX      = 2400.0;
+    uint32_t nNodes     = 40;
+    double   areaX      = 800.0;
     double   areaY      = 800.0;
     double   txRange    = 250.0;
     double   simTime    = 120.0;
     double   pauseTime  = 5.0;
     double   minSpeed   = 1.0;
-    double   maxSpeed   = 10.0;
+    double   maxSpeed   = 5.0;
     uint32_t pktRate    = 4;      // packets/s
     uint32_t pktSize    = 64;     // bytes
     double   initEnergy = 100.0;  // J per node
