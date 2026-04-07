@@ -417,13 +417,21 @@ private:
     double      GetResidualEnergy() const;
     Ptr<Ipv4Route> BuildRoute(Ipv4Address dst, Ipv4Address nextHop) const;
 
+
     // ---- Packing Floor (Section 3.1) ----
     // Called when data arrives from transport layer
+
+    // Packing floor: queued packets waiting for a forager
+    std::map<Ipv4Address, std::list<PackerEntry>> m_packerQueue;
+
     void PackingFloorReceive(Ptr<const Packet> p, const Ipv4Header& hdr,
                              const UnicastForwardCallback& ucb,
                              const ErrorCallback& ecb);
     void CheckPackerQueue();         // periodic: retry packers waiting for forager
     void DrainPackerQueue(Ipv4Address dst); // forager arrived, drain queue
+
+
+    
 
     // ---- Entrance (Section 3.2) ----
     void RecvEntrance(Ptr<Socket> socket);   // all incoming packets land here
@@ -481,9 +489,6 @@ private:
     uint32_t m_maintenanceTick {0};
     // The three hive components
     DanceFloor m_danceFloor;
-
-    // Packing floor: queued packets waiting for a forager
-    std::map<Ipv4Address, std::list<PackerEntry>> m_packerQueue;
 
     // Entrance: seen scouts table (Section 3.2)
     std::map<ScoutId, Time>  m_seenScouts;

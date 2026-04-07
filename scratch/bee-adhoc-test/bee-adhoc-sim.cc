@@ -95,6 +95,7 @@ struct SimResults {
     double delay90       {0.0};  // ms
     double delay95       {0.0};  // ms
     double delay100      {0.0};  // ms (worst-case)
+    double PacketDropRatio {0.0};  // %
 
     // Energy
     double initEnergyTotal    {0.0};  // J
@@ -317,6 +318,9 @@ SimResults RunSimulation(
     // Derived metrics
     res.pdr = res.txPkts > 0 ?
         (double)res.rxPkts / res.txPkts * 100.0 : 0.0;
+    
+    res.PacketDropRatio = res.txPkts > 0 ?
+        (double)(res.txPkts - res.rxPkts) / res.txPkts * 100.0 : 0.0;
 
     double trafficDuration = appStop - appStart;
     res.throughputKbps = res.rxBytes * 8.0 / trafficDuration / 1000.0;
@@ -363,11 +367,9 @@ static void PrintResults(const SimResults& r)
     std::cout << std::fixed << std::setprecision(2);
     std::cout
         << "  Packet Delivery Ratio : " << r.pdr            << " %\n"
+        << "  Packet Drop Ratio     : " << r.PacketDropRatio << " %\n"
         << "  Throughput            : " << r.throughputKbps << " kbit/s\n"
         << "  Delay (avg)           : " << r.delayAvg       << " ms\n"
-        << "  Delay (90th pct)      : " << r.delay90        << " ms\n"
-        << "  Delay (95th pct)      : " << r.delay95        << " ms\n"
-        << "  Delay (100th pct)     : " << r.delay100       << " ms\n"
         << "  Energy consumed       : " << r.consumedJ
                                         << " J / " << r.initEnergyTotal << " J\n"
         << "  Energy per user data  : " << r.energyPerKB    << " mJ/kB\n"
@@ -415,6 +417,7 @@ static void PrintComparison(const SimResults& bee, const SimResults& aodv)
     };
 
     row("PDR (%)",              bee.pdr,            aodv.pdr,            "%",       true);
+    row("Packet Drop Ratio (%)", bee.PacketDropRatio, aodv.PacketDropRatio, "%",       false);
     row("Throughput (kbit/s)",  bee.throughputKbps,  aodv.throughputKbps, "kbit/s",  true);
     row("Delay avg (ms)",       bee.delayAvg,        aodv.delayAvg,       "ms",      false);
     row("Delay 90th pct (ms)",  bee.delay90,         aodv.delay90,        "ms",      false);
@@ -447,6 +450,7 @@ static void PrintComparison(const SimResults& bee, const SimResults& aodv)
     countWin(bee.energyPerKB,    aodv.energyPerKB,    false);
     countWin(bee.remainingPct,   aodv.remainingPct,   true);
     countWin((double)bee.rxPkts, (double)aodv.rxPkts, true);
+    countWin(bee.PacketDropRatio, aodv.PacketDropRatio, false);
 
     std::cout << "\n  Overall: BeeAdHoc wins " << beeWins
               << " metrics,  AODV wins " << aodvWins
@@ -463,11 +467,9 @@ static void SaveCSV(const SimResults& bee, const SimResults& aodv,
     std::ofstream f(fname);
     f << "metric,beeadhoc,aodv\n"
       << "pdr_pct,"           << bee.pdr            << "," << aodv.pdr            << "\n"
+      << "packet_drop_ratio," << bee.PacketDropRatio << "," << aodv.PacketDropRatio << "\n"
       << "throughput_kbps,"   << bee.throughputKbps  << "," << aodv.throughputKbps << "\n"
       << "delay_avg_ms,"      << bee.delayAvg        << "," << aodv.delayAvg       << "\n"
-      << "delay_90pct_ms,"    << bee.delay90         << "," << aodv.delay90        << "\n"
-      << "delay_95pct_ms,"    << bee.delay95         << "," << aodv.delay95        << "\n"
-      << "delay_100pct_ms,"   << bee.delay100        << "," << aodv.delay100       << "\n"
       << "energy_consumed_J," << bee.consumedJ       << "," << aodv.consumedJ      << "\n"
       << "energy_per_kB_mJkB,"<< bee.energyPerKB    << "," << aodv.energyPerKB    << "\n"
       << "remaining_energy_pct,"<< bee.remainingPct  << "," << aodv.remainingPct   << "\n"
