@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-oran
+Description: 
+URL: 
+Version: 3.45
+Requires:  ns3-core ns3-network ns3-lte
+Requires.private: 
+Cflags: -I"${includedir}"  -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr -I/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2 -I/opt/homebrew/include -I/opt/homebrew/include/torch
+Libs: -L"${libdir}" -lns3.45-oran-default  /opt/homebrew/lib/libtorch.dylib -lns3.45-core-default -lns3.45-network-default -lns3.45-lte-default /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd /opt/homebrew/lib/libtorch.dylib
+Libs.private: -L"${libdir}" 

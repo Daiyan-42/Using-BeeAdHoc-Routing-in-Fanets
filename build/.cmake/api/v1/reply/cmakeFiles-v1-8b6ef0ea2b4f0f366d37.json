@@ -1,0 +1,869 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/**",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/.DS_Store",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/CMakeLists.txt",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/bee-adhoc-test",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/nested-subdir",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/scratch-simulator.cc",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/subdir"
+			]
+		},
+		{
+			"expression" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/[^.]*.cc",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/scratch-simulator.cc"
+			]
+		},
+		{
+			"expression" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/subdir/[^.]*.cc",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/subdir/scratch-subdir-additional-header.cc",
+				"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/scratch/subdir/scratch-subdir.cc"
+			]
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.0.3/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/CMakeFiles/4.0.3/CMakeCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
+		},
+		{
+			"path" : "build-support/macros-and-definitions.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-hidden-settings.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/colored-messages.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-output-directory.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-cmake-package.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-platform-support.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-compiler-and-linker-support.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/find-program-hints.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-find-external-library.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-check-dependencies.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckIncludeFiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/ProcessorCount.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-executables.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-module-macros.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-contributions.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-filter-modules.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-ns3rc-parser.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-lock.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-configtable.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-versioning.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-compiler-workarounds.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-vcpkg-hunter.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindGit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindEigen3.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindHarfBuzz.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindGTK3.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindFreetype.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindLibXml2.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/custom-modules/ns3-coverage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/opt/homebrew/lib/cmake/Boost-1.90.0/BoostConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/opt/homebrew/lib/cmake/Boost-1.90.0/BoostConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/opt/homebrew/lib/cmake/boost_headers-1.90.0/boost_headers-config-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/opt/homebrew/lib/cmake/boost_headers-1.90.0/boost_headers-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindGSL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "build-support/3rd-party/FindSphinx.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"path" : "build-support/core-config-template.h"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"path" : "build-support/pkgconfig-template.pc.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"path" : "build-support/Config.cmake.in"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/BasicConfigVersion-ExactVersion.cmake.in"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "src/aodv/CMakeLists.txt"
+		},
+		{
+			"path" : "src/aodv/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/applications/CMakeLists.txt"
+		},
+		{
+			"path" : "src/applications/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/core/CMakeLists.txt"
+		},
+		{
+			"path" : "src/core/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/energy/CMakeLists.txt"
+		},
+		{
+			"path" : "src/energy/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/flow-monitor/CMakeLists.txt"
+		},
+		{
+			"path" : "src/flow-monitor/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/internet/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/GenerateExportHeader.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/share/cmake/Modules/exportheader.cmake.in"
+		},
+		{
+			"path" : "src/internet/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/mobility/CMakeLists.txt"
+		},
+		{
+			"path" : "src/mobility/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/network/CMakeLists.txt"
+		},
+		{
+			"path" : "src/network/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stats/CMakeLists.txt"
+		},
+		{
+			"path" : "src/stats/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/wifi/CMakeLists.txt"
+		},
+		{
+			"path" : "src/wifi/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/bridge/CMakeLists.txt"
+		},
+		{
+			"path" : "src/bridge/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/traffic-control/CMakeLists.txt"
+		},
+		{
+			"path" : "src/traffic-control/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/internet-apps/CMakeLists.txt"
+		},
+		{
+			"path" : "src/internet-apps/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/spectrum/CMakeLists.txt"
+		},
+		{
+			"path" : "src/spectrum/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/propagation/CMakeLists.txt"
+		},
+		{
+			"path" : "src/propagation/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/antenna/CMakeLists.txt"
+		},
+		{
+			"path" : "src/antenna/examples/CMakeLists.txt"
+		},
+		{
+			"path" : "src/test/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/channel-models/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/energy/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/error-model/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/ipv6/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/matrix-topology/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/naming/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/realtime/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/routing/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/socket/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/stats/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/tcp/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/traffic-control/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/tutorial/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/udp/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/udp-client-server/CMakeLists.txt"
+		},
+		{
+			"path" : "examples/wireless/CMakeLists.txt"
+		},
+		{
+			"path" : "scratch/CMakeLists.txt"
+		},
+		{
+			"path" : "scratch/bee-adhoc-test/CMakeLists.txt"
+		},
+		{
+			"path" : "scratch/nested-subdir/CMakeLists.txt"
+		},
+		{
+			"path" : "utils/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build",
+		"source" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

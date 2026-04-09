@@ -1,0 +1,2533 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						35,
+						52,
+						55
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-a0daf7902a192b71326e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						4,
+						12,
+						20,
+						23,
+						27,
+						28,
+						72,
+						73,
+						74,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						98,
+						99,
+						103,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						4,
+						6,
+						8,
+						10,
+						12,
+						14,
+						16,
+						18,
+						20,
+						22,
+						24,
+						26,
+						28,
+						30,
+						32,
+						34
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/aodv",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.aodv-Debug-a86281d3062715defa18.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/aodv",
+					"targetIndexes" : 
+					[
+						7,
+						9
+					]
+				},
+				{
+					"build" : "src/aodv/examples",
+					"jsonFile" : "directory-src.aodv.examples-Debug-f0155eb9feb946108fa0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/aodv/examples",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src/applications",
+					"childIndexes" : 
+					[
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.applications-Debug-45b58a97ba85002f9ca2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/applications",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "src/applications/examples",
+					"jsonFile" : "directory-src.applications.examples-Debug-6514131faa990d08e542.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/applications/examples"
+				},
+				{
+					"build" : "src/core",
+					"childIndexes" : 
+					[
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.core-Debug-9635d5c81c537994f8ed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						24,
+						25
+					]
+				},
+				{
+					"build" : "src/core/examples",
+					"jsonFile" : "directory-src.core.examples-Debug-cf036aebed444513f199.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "src/core/examples",
+					"targetIndexes" : 
+					[
+						13,
+						21,
+						29,
+						32,
+						41,
+						47,
+						49,
+						51,
+						55,
+						59,
+						76,
+						77,
+						78,
+						79,
+						80,
+						100,
+						104
+					]
+				},
+				{
+					"build" : "src/energy",
+					"childIndexes" : 
+					[
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.energy-Debug-89a4a4a80198deb3efa3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/energy",
+					"targetIndexes" : 
+					[
+						30,
+						31
+					]
+				},
+				{
+					"build" : "src/energy/examples",
+					"jsonFile" : "directory-src.energy.examples-Debug-899fa6abb5b455deda59.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "src/energy/examples",
+					"targetIndexes" : 
+					[
+						14,
+						37,
+						48,
+						75
+					]
+				},
+				{
+					"build" : "src/flow-monitor",
+					"childIndexes" : 
+					[
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.flow-monitor-Debug-510d674b5360daaafa0f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/flow-monitor",
+					"targetIndexes" : 
+					[
+						35
+					]
+				},
+				{
+					"build" : "src/flow-monitor/examples",
+					"jsonFile" : "directory-src.flow-monitor.examples-Debug-697c05202d485f5188a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 0,
+					"source" : "src/flow-monitor/examples"
+				},
+				{
+					"build" : "src/internet",
+					"childIndexes" : 
+					[
+						13
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.internet-Debug-15570c828ac308bba70a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/internet",
+					"targetIndexes" : 
+					[
+						43,
+						46
+					]
+				},
+				{
+					"build" : "src/internet/examples",
+					"jsonFile" : "directory-src.internet.examples-Debug-c9d36798a323eddfe079.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "src/internet/examples",
+					"targetIndexes" : 
+					[
+						58
+					]
+				},
+				{
+					"build" : "src/mobility",
+					"childIndexes" : 
+					[
+						15
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.mobility-Debug-2a15e90ff992e566addb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/mobility",
+					"targetIndexes" : 
+					[
+						60,
+						61
+					]
+				},
+				{
+					"build" : "src/mobility/examples",
+					"jsonFile" : "directory-src.mobility.examples-Debug-f6913d3de2bd326f943a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 14,
+					"projectIndex" : 0,
+					"source" : "src/mobility/examples",
+					"targetIndexes" : 
+					[
+						18,
+						22,
+						52,
+						56,
+						57,
+						62,
+						65,
+						71
+					]
+				},
+				{
+					"build" : "src/network",
+					"childIndexes" : 
+					[
+						17
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.network-Debug-c7e9daa495de68287225.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/network",
+					"targetIndexes" : 
+					[
+						63,
+						64
+					]
+				},
+				{
+					"build" : "src/network/examples",
+					"jsonFile" : "directory-src.network.examples-Debug-d847c6f7ea1816c354a0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 16,
+					"projectIndex" : 0,
+					"source" : "src/network/examples",
+					"targetIndexes" : 
+					[
+						17,
+						50,
+						53,
+						54,
+						66
+					]
+				},
+				{
+					"build" : "src/stats",
+					"childIndexes" : 
+					[
+						19
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.stats-Debug-5f0b7c0c3104b1d4d861.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/stats",
+					"targetIndexes" : 
+					[
+						96,
+						97
+					]
+				},
+				{
+					"build" : "src/stats/examples",
+					"jsonFile" : "directory-src.stats.examples-Debug-c352dcf33a39dd16ef39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 18,
+					"projectIndex" : 0,
+					"source" : "src/stats/examples",
+					"targetIndexes" : 
+					[
+						26,
+						33,
+						34,
+						38,
+						39,
+						40,
+						106
+					]
+				},
+				{
+					"build" : "src/wifi",
+					"childIndexes" : 
+					[
+						21
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.wifi-Debug-14e7a1b28f04f14f890b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/wifi",
+					"targetIndexes" : 
+					[
+						129,
+						170
+					]
+				},
+				{
+					"build" : "src/wifi/examples",
+					"jsonFile" : "directory-src.wifi.examples-Debug-798811c2741c91533c5c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 20,
+					"projectIndex" : 0,
+					"source" : "src/wifi/examples",
+					"targetIndexes" : 
+					[
+						136,
+						139,
+						147,
+						155,
+						156,
+						171,
+						173
+					]
+				},
+				{
+					"build" : "src/bridge",
+					"childIndexes" : 
+					[
+						23
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.bridge-Debug-614304c0b46f13308324.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/bridge",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "src/bridge/examples",
+					"jsonFile" : "directory-src.bridge.examples-Debug-b349bee3e63f2931dc02.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 0,
+					"source" : "src/bridge/examples"
+				},
+				{
+					"build" : "src/traffic-control",
+					"childIndexes" : 
+					[
+						25
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.traffic-control-Debug-8f74c9cbdc401591643f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/traffic-control",
+					"targetIndexes" : 
+					[
+						107,
+						108
+					]
+				},
+				{
+					"build" : "src/traffic-control/examples",
+					"jsonFile" : "directory-src.traffic-control.examples-Debug-3fed5753f34422b4fd44.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 24,
+					"projectIndex" : 0,
+					"source" : "src/traffic-control/examples"
+				},
+				{
+					"build" : "src/internet-apps",
+					"childIndexes" : 
+					[
+						27
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.internet-apps-Debug-a8f9b3d49eecd19f715a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/internet-apps",
+					"targetIndexes" : 
+					[
+						44,
+						45
+					]
+				},
+				{
+					"build" : "src/internet-apps/examples",
+					"jsonFile" : "directory-src.internet-apps.examples-Debug-1cc510b14b14ff14e3df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 26,
+					"projectIndex" : 0,
+					"source" : "src/internet-apps/examples"
+				},
+				{
+					"build" : "src/spectrum",
+					"childIndexes" : 
+					[
+						29
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.spectrum-Debug-3db8f0a111a6744a72f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/spectrum",
+					"targetIndexes" : 
+					[
+						88,
+						89
+					]
+				},
+				{
+					"build" : "src/spectrum/examples",
+					"jsonFile" : "directory-src.spectrum.examples-Debug-f401dce37bf649fcbc68.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 28,
+					"projectIndex" : 0,
+					"source" : "src/spectrum/examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						105,
+						109,
+						110
+					]
+				},
+				{
+					"build" : "src/propagation",
+					"childIndexes" : 
+					[
+						31
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.propagation-Debug-1af8d048a1a1e69e38a2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/propagation",
+					"targetIndexes" : 
+					[
+						69,
+						70
+					]
+				},
+				{
+					"build" : "src/propagation/examples",
+					"jsonFile" : "directory-src.propagation.examples-Debug-7640d9637737bd771c9f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 30,
+					"projectIndex" : 0,
+					"source" : "src/propagation/examples"
+				},
+				{
+					"build" : "src/antenna",
+					"childIndexes" : 
+					[
+						33
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.antenna-Debug-01c21a0215ce3c10d55b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/antenna",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src/antenna/examples",
+					"jsonFile" : "directory-src.antenna.examples-Debug-6714af5a5bd599851e09.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 32,
+					"projectIndex" : 0,
+					"source" : "src/antenna/examples",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/test",
+					"jsonFile" : "directory-src.test-Debug-3607701395add829ebf1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/test",
+					"targetIndexes" : 
+					[
+						101
+					]
+				},
+				{
+					"build" : "examples",
+					"childIndexes" : 
+					[
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51
+					],
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "examples/channel-models",
+					"jsonFile" : "directory-examples.channel-models-Debug-6c8219dcb1da21432c55.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/channel-models"
+				},
+				{
+					"build" : "examples/energy",
+					"jsonFile" : "directory-examples.energy-Debug-3005bb7082eafa9d95d5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/energy"
+				},
+				{
+					"build" : "examples/error-model",
+					"jsonFile" : "directory-examples.error-model-Debug-b1a58f3262fc5a74391c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/error-model"
+				},
+				{
+					"build" : "examples/ipv6",
+					"jsonFile" : "directory-examples.ipv6-Debug-2fe05ae0057e41a8c4fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/ipv6"
+				},
+				{
+					"build" : "examples/matrix-topology",
+					"jsonFile" : "directory-examples.matrix-topology-Debug-f74d1390dc8214d833d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/matrix-topology"
+				},
+				{
+					"build" : "examples/naming",
+					"jsonFile" : "directory-examples.naming-Debug-d6d99ff437e811ac28a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/naming"
+				},
+				{
+					"build" : "examples/realtime",
+					"jsonFile" : "directory-examples.realtime-Debug-bb4a6c9e68189af0a409.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/realtime"
+				},
+				{
+					"build" : "examples/routing",
+					"jsonFile" : "directory-examples.routing-Debug-4d67d960d4d615cf0f50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/routing",
+					"targetIndexes" : 
+					[
+						87
+					]
+				},
+				{
+					"build" : "examples/socket",
+					"jsonFile" : "directory-examples.socket-Debug-b267d3e97291cea0bdb4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/socket"
+				},
+				{
+					"build" : "examples/stats",
+					"jsonFile" : "directory-examples.stats-Debug-e61ee1415315d34f3fb7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/stats",
+					"targetIndexes" : 
+					[
+						143
+					]
+				},
+				{
+					"build" : "examples/tcp",
+					"jsonFile" : "directory-examples.tcp-Debug-ba228b45a7a086431b56.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/tcp"
+				},
+				{
+					"build" : "examples/traffic-control",
+					"jsonFile" : "directory-examples.traffic-control-Debug-72e302a5d2cdba4c3479.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/traffic-control"
+				},
+				{
+					"build" : "examples/tutorial",
+					"jsonFile" : "directory-examples.tutorial-Debug-bfeaf370295e57c19bd9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/tutorial",
+					"targetIndexes" : 
+					[
+						36,
+						42
+					]
+				},
+				{
+					"build" : "examples/udp",
+					"jsonFile" : "directory-examples.udp-Debug-b8483f6c4b330763da8a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/udp"
+				},
+				{
+					"build" : "examples/udp-client-server",
+					"jsonFile" : "directory-examples.udp-client-server-Debug-40405e86bf673b4e0425.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/udp-client-server"
+				},
+				{
+					"build" : "examples/wireless",
+					"jsonFile" : "directory-examples.wireless-Debug-0cc5a43352fffcf40187.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 0,
+					"source" : "examples/wireless",
+					"targetIndexes" : 
+					[
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						137,
+						138,
+						140,
+						141,
+						142,
+						144,
+						145,
+						146,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						172,
+						174,
+						175
+					]
+				},
+				{
+					"build" : "scratch",
+					"childIndexes" : 
+					[
+						53,
+						54
+					],
+					"jsonFile" : "directory-scratch-Debug-84c3d4857e140a6d4723.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "scratch",
+					"targetIndexes" : 
+					[
+						85,
+						86
+					]
+				},
+				{
+					"build" : "scratch/bee-adhoc-test",
+					"jsonFile" : "directory-scratch.bee-adhoc-test-Debug-1729e48f67542af367a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 52,
+					"projectIndex" : 0,
+					"source" : "scratch/bee-adhoc-test",
+					"targetIndexes" : 
+					[
+						82,
+						83
+					]
+				},
+				{
+					"build" : "scratch/nested-subdir",
+					"jsonFile" : "directory-scratch.nested-subdir-Debug-d5218adf067b73e1d13a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 52,
+					"projectIndex" : 0,
+					"source" : "scratch/nested-subdir",
+					"targetIndexes" : 
+					[
+						81,
+						84
+					]
+				},
+				{
+					"build" : "utils",
+					"jsonFile" : "directory-utils-Debug-ecc62ddb27eede1f7ffa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13..3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "utils",
+					"targetIndexes" : 
+					[
+						15,
+						16,
+						67,
+						68,
+						102
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55
+					],
+					"name" : "NS3",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						142,
+						143,
+						144,
+						145,
+						146,
+						147,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						155,
+						156,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						170,
+						171,
+						172,
+						173,
+						174,
+						175
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 29,
+					"id" : "adhoc-aloha-ideal-phy::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-adhoc-aloha-ideal-phy-Debug-734a50a33c47b0f5c138.json",
+					"name" : "adhoc-aloha-ideal-phy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "adhoc-aloha-ideal-phy-matrix-propagation-loss-model::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-adhoc-aloha-ideal-phy-matrix-propagation-loss-model-Debug-ec4d7f5a84b1c966c34e.json",
+					"name" : "adhoc-aloha-ideal-phy-matrix-propagation-loss-model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "adhoc-aloha-ideal-phy-with-microwave-oven::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-adhoc-aloha-ideal-phy-with-microwave-oven-Debug-85b7435963b1e29da5a3.json",
+					"name" : "adhoc-aloha-ideal-phy-with-microwave-oven",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 33,
+					"id" : "adjacency-matrix-example::@7aa2379c68f0c822458b",
+					"jsonFile" : "target-adjacency-matrix-example-Debug-6f8f2937a6ad3eb18c36.json",
+					"name" : "adjacency-matrix-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all-test-targets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all-test-targets-Debug-dfdd21675b3bbb801b6a.json",
+					"name" : "all-test-targets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "antenna::@000737a0949b1597daab",
+					"jsonFile" : "target-antenna-Debug-d960a8d22f7900eb2f9e.json",
+					"name" : "antenna",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "antenna-test::@000737a0949b1597daab",
+					"jsonFile" : "target-antenna-test-Debug-ee41c4cef4b0419413fd.json",
+					"name" : "antenna-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "aodv::@703ac9d15d05cf47735c",
+					"jsonFile" : "target-aodv-Debug-e7a0214ce04cbbddfef3.json",
+					"name" : "aodv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "aodv-example::@ad38c89485e5e67cec0a",
+					"jsonFile" : "target-aodv-example-Debug-42b244010f4603289d1d.json",
+					"name" : "aodv-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "aodv-test::@703ac9d15d05cf47735c",
+					"jsonFile" : "target-aodv-test-Debug-a850540f9c8f61173942.json",
+					"name" : "aodv-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "applications::@a48e303ef543a0192510",
+					"jsonFile" : "target-applications-Debug-e57621a9e018d1b9b604.json",
+					"name" : "applications",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "applications-test::@a48e303ef543a0192510",
+					"jsonFile" : "target-applications-test-Debug-bbd3371aa2b4daedfe21.json",
+					"name" : "applications-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "assemble-introspected-command-line::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-assemble-introspected-command-line-Debug-a5d2ba2522f39a5540b9.json",
+					"name" : "assemble-introspected-command-line",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "assert-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-assert-example-Debug-0d870a9bbd6938fa67a0.json",
+					"name" : "assert-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "basic-energy-model-test::@29acedd5ca1ded80d01c",
+					"jsonFile" : "target-basic-energy-model-test-Debug-e228e6a7e23097fb6cde.json",
+					"name" : "basic-energy-model-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "bench-packets::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-bench-packets-Debug-029c4ccacee9b71a50c8.json",
+					"name" : "bench-packets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "bench-scheduler::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-bench-scheduler-Debug-6e196c720401e6b5b58b.json",
+					"name" : "bench-scheduler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "bit-serializer::@4b49282bd3eaf586512e",
+					"jsonFile" : "target-bit-serializer-Debug-e7249efc31865f8b78fa.json",
+					"name" : "bit-serializer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "bonnmotion-ns2-example::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-bonnmotion-ns2-example-Debug-56b03d6727dbd7b5290d.json",
+					"name" : "bonnmotion-ns2-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "bridge::@e12754a9402ac756973a",
+					"jsonFile" : "target-bridge-Debug-d73fe2e7beb953f44713.json",
+					"name" : "bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "check-version::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-version-Debug-84c91d56f4177595208c.json",
+					"name" : "check-version",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "command-line-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-command-line-example-Debug-b85b80c5bcdc36016f28.json",
+					"name" : "command-line-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "constant-mobility-example::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-constant-mobility-example-Debug-7835c189f42376104265.json",
+					"name" : "constant-mobility-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "copy_all_headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_all_headers-Debug-2c5b521bd20d1249d766.json",
+					"name" : "copy_all_headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-Debug-c45fbf6ce0cf717a9484.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "core-test::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-test-Debug-f0584ae4dae249e88dfa.json",
+					"name" : "core-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "double-probe-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-double-probe-example-Debug-67b3cb1d193978681536.json",
+					"name" : "double-probe-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doxygen-Debug-01e0f7d9f74214013f7e.json",
+					"name" : "doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doxygen-no-build::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doxygen-no-build-Debug-778c4a9536b52915e5be.json",
+					"name" : "doxygen-no-build",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "empirical-random-variable-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-empirical-random-variable-example-Debug-1183220eddd959f88a6b.json",
+					"name" : "empirical-random-variable-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "energy::@64b7acd7d729390dea74",
+					"jsonFile" : "target-energy-Debug-1e7538188716fe1808dc.json",
+					"name" : "energy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "energy-test::@64b7acd7d729390dea74",
+					"jsonFile" : "target-energy-test-Debug-58f5794c28fe86ca4f0b.json",
+					"name" : "energy-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "fatal-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-fatal-example-Debug-8de5ee6b055eb2c2fff7.json",
+					"name" : "fatal-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "file-aggregator-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-file-aggregator-example-Debug-0b7aa4adae7af61aa96f.json",
+					"name" : "file-aggregator-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "file-helper-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-file-helper-example-Debug-f3e3f43b557082530957.json",
+					"name" : "file-helper-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "flow-monitor::@6febb32c3c87917add27",
+					"jsonFile" : "target-flow-monitor-Debug-846163bcdc65f290482e.json",
+					"name" : "flow-monitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "fourth::@673d0a044e9485c9d7ef",
+					"jsonFile" : "target-fourth-Debug-a84f82d8f11e2572d837.json",
+					"name" : "fourth",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "generic-battery-discharge-example::@29acedd5ca1ded80d01c",
+					"jsonFile" : "target-generic-battery-discharge-example-Debug-865cf10fac3cabc9754e.json",
+					"name" : "generic-battery-discharge-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "gnuplot-aggregator-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-gnuplot-aggregator-example-Debug-e699f9d5f97ef89bf15d.json",
+					"name" : "gnuplot-aggregator-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "gnuplot-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-gnuplot-example-Debug-87316ff65e13fb6d67d9.json",
+					"name" : "gnuplot-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "gnuplot-helper-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-gnuplot-helper-example-Debug-3019ddb7f892aaea0203.json",
+					"name" : "gnuplot-helper-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "hash-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-hash-example-Debug-baf7a2a75782e676e512.json",
+					"name" : "hash-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "hello-simulator::@673d0a044e9485c9d7ef",
+					"jsonFile" : "target-hello-simulator-Debug-083488787f589032140b.json",
+					"name" : "hello-simulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "internet::@cf20f20ea777b8d334b4",
+					"jsonFile" : "target-internet-Debug-4f284459b72b5915383f.json",
+					"name" : "internet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "internet-apps::@1ed805a9b59b824e59c4",
+					"jsonFile" : "target-internet-apps-Debug-ebb8f6c5bcb3a3a2e2a0.json",
+					"name" : "internet-apps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "internet-apps-test::@1ed805a9b59b824e59c4",
+					"jsonFile" : "target-internet-apps-test-Debug-f54b2e67c2a544af5281.json",
+					"name" : "internet-apps-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "internet-test::@cf20f20ea777b8d334b4",
+					"jsonFile" : "target-internet-test-Debug-fcedb1f87b2b46d30f74.json",
+					"name" : "internet-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "length-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-length-example-Debug-064d48df518087a0d8de.json",
+					"name" : "length-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "li-ion-energy-source-example::@29acedd5ca1ded80d01c",
+					"jsonFile" : "target-li-ion-energy-source-example-Debug-bfb7588dc6976ec177a3.json",
+					"name" : "li-ion-energy-source-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "log-example::@fad85cec64f9971644fe",
+					"jsonFile" : "target-log-example-Debug-423dc53cb0d7436ee8f7.json",
+					"name" : "log-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "lollipop-comparisons::@4b49282bd3eaf586512e",
+					"jsonFile" : "target-lollipop-comparisons-Debug-3e15f5e5d177882ec021.json",
+					"name" : "lollipop-comparisons",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "main-callback::@fad85cec64f9971644fe",
+					"jsonFile" : "target-main-callback-Debug-f1b206acabd34c6d98d5.json",
+					"name" : "main-callback",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "main-grid-topology::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-main-grid-topology-Debug-3e8a9eeba5a5d6870924.json",
+					"name" : "main-grid-topology",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "main-packet-header::@4b49282bd3eaf586512e",
+					"jsonFile" : "target-main-packet-header-Debug-9167f6046fdc82a59f43.json",
+					"name" : "main-packet-header",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "main-packet-tag::@4b49282bd3eaf586512e",
+					"jsonFile" : "target-main-packet-tag-Debug-b0706425c14da70bc32d.json",
+					"name" : "main-packet-tag",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "main-ptr::@fad85cec64f9971644fe",
+					"jsonFile" : "target-main-ptr-Debug-b42e743af984a90a273d.json",
+					"name" : "main-ptr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "main-random-topology::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-main-random-topology-Debug-f03159d7164359dae67d.json",
+					"name" : "main-random-topology",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "main-random-walk::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-main-random-walk-Debug-d351ca25ae0f74f76a47.json",
+					"name" : "main-random-walk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "main-simple::@b3bd63b01cefe7cb299b",
+					"jsonFile" : "target-main-simple-Debug-dfc2e5cfa7aab694ecc6.json",
+					"name" : "main-simple",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "main-test-sync::@fad85cec64f9971644fe",
+					"jsonFile" : "target-main-test-sync-Debug-9439c6e4bf203c755f4e.json",
+					"name" : "main-test-sync",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "mobility::@2e8c3d564dbe2f6b990d",
+					"jsonFile" : "target-mobility-Debug-85e009818640e637dd6a.json",
+					"name" : "mobility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "mobility-test::@2e8c3d564dbe2f6b990d",
+					"jsonFile" : "target-mobility-test-Debug-ef729a741fe1a13a20fc.json",
+					"name" : "mobility-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "mobility-trace-example::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-mobility-trace-example-Debug-a69c59f89efabfa8b824.json",
+					"name" : "mobility-trace-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "network::@311edf953348ef8fadde",
+					"jsonFile" : "target-network-Debug-88b40229a10dc2e91414.json",
+					"name" : "network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "network-test::@311edf953348ef8fadde",
+					"jsonFile" : "target-network-test-Debug-f462d236bf1f9669b70e.json",
+					"name" : "network-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "ns2-mobility-trace::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-ns2-mobility-trace-Debug-8af5671e570c433d09c5.json",
+					"name" : "ns2-mobility-trace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "packet-socket-apps::@4b49282bd3eaf586512e",
+					"jsonFile" : "target-packet-socket-apps-Debug-974fdb0ca6edb1d4d399.json",
+					"name" : "packet-socket-apps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "perf-io::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-perf-io-Debug-44cfdfc2778e22fdc026.json",
+					"name" : "perf-io",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "print-introspected-doxygen::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-print-introspected-doxygen-Debug-34b74472228d7b3bb71d.json",
+					"name" : "print-introspected-doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "propagation::@e1205667d4949730ed2e",
+					"jsonFile" : "target-propagation-Debug-bfea0f325034b3a6d103.json",
+					"name" : "propagation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "propagation-test::@e1205667d4949730ed2e",
+					"jsonFile" : "target-propagation-test-Debug-34a72e3c68efea1c5a2c.json",
+					"name" : "propagation-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "reference-point-group-mobility-example::@7724fcf1e14e3a7fd020",
+					"jsonFile" : "target-reference-point-group-mobility-example-Debug-d1a82c007d83dbe121a5.json",
+					"name" : "reference-point-group-mobility-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run-introspected-command-line::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run-introspected-command-line-Debug-ebaa25e593174fca523d.json",
+					"name" : "run-introspected-command-line",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run-print-introspected-doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run-print-introspected-doxygen-Debug-27bb1503d483678485f9.json",
+					"name" : "run-print-introspected-doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_test_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_test_py-Debug-a0da10899dc24a7a7418.json",
+					"name" : "run_test_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "rv-battery-model-test::@29acedd5ca1ded80d01c",
+					"jsonFile" : "target-rv-battery-model-test-Debug-e645f06d796def845267.json",
+					"name" : "rv-battery-model-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sample-log-time-format::@fad85cec64f9971644fe",
+					"jsonFile" : "target-sample-log-time-format-Debug-7f00ef1d37b1eaf47741.json",
+					"name" : "sample-log-time-format",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sample-random-variable::@fad85cec64f9971644fe",
+					"jsonFile" : "target-sample-random-variable-Debug-cd7fa9f0927c058380c4.json",
+					"name" : "sample-random-variable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sample-random-variable-stream::@fad85cec64f9971644fe",
+					"jsonFile" : "target-sample-random-variable-stream-Debug-e59f4e2d171a90e58087.json",
+					"name" : "sample-random-variable-stream",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sample-show-progress::@fad85cec64f9971644fe",
+					"jsonFile" : "target-sample-show-progress-Debug-89f51d0cc971d83456ce.json",
+					"name" : "sample-show-progress",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sample-simulator::@fad85cec64f9971644fe",
+					"jsonFile" : "target-sample-simulator-Debug-5586db052a27c7028271.json",
+					"name" : "sample-simulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 54,
+					"id" : "scratch-nested-subdir-lib::@0af2a42ff7ab2a87b8ee",
+					"jsonFile" : "target-scratch-nested-subdir-lib-Debug-d6a6fab6771d4e17cb5a.json",
+					"name" : "scratch-nested-subdir-lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "scratch_bee-adhoc-test_bee-adhoc-sim::@4450be0818210f9e82f7",
+					"jsonFile" : "target-scratch_bee-adhoc-test_bee-adhoc-sim-Debug-2ce01ccf7ae48af29696.json",
+					"name" : "scratch_bee-adhoc-test_bee-adhoc-sim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "scratch_bee-adhoc-test_fanet-aodv-bee::@4450be0818210f9e82f7",
+					"jsonFile" : "target-scratch_bee-adhoc-test_fanet-aodv-bee-Debug-3b927cf45955821dfb65.json",
+					"name" : "scratch_bee-adhoc-test_fanet-aodv-bee",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 54,
+					"id" : "scratch_nested-subdir_scratch-nested-subdir-executable::@0af2a42ff7ab2a87b8ee",
+					"jsonFile" : "target-scratch_nested-subdir_scratch-nested-subdir-executable-Debug-62fb01887b4f4f1d631e.json",
+					"name" : "scratch_nested-subdir_scratch-nested-subdir-executable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 52,
+					"id" : "scratch_scratch-simulator::@12119f3906236ec082b9",
+					"jsonFile" : "target-scratch_scratch-simulator-Debug-61898a752b530707b0a6.json",
+					"name" : "scratch_scratch-simulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 52,
+					"id" : "scratch_subdir_scratch-subdir::@12119f3906236ec082b9",
+					"jsonFile" : "target-scratch_subdir_scratch-subdir-Debug-dbda38d2788910d7793b.json",
+					"name" : "scratch_subdir_scratch-subdir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "simple-multicast-flooding::@dd4881ba9d1840abcb68",
+					"jsonFile" : "target-simple-multicast-flooding-Debug-5f84081206190a533087.json",
+					"name" : "simple-multicast-flooding",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "spectrum::@edd78237c376ce4d0dc6",
+					"jsonFile" : "target-spectrum-Debug-3aa83117166ed91cfcbc.json",
+					"name" : "spectrum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "spectrum-test::@edd78237c376ce4d0dc6",
+					"jsonFile" : "target-spectrum-test-Debug-c90911e77963c3f5696b.json",
+					"name" : "spectrum-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx-Debug-7a6fa2835c5ad9d678d5.json",
+					"name" : "sphinx",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_contributing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_contributing-Debug-77bc4c4859cdb7c33be2.json",
+					"name" : "sphinx_contributing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_installation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_installation-Debug-e4bd2dbef84de546fad8.json",
+					"name" : "sphinx_installation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_manual::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_manual-Debug-0785846da82333c3e34d.json",
+					"name" : "sphinx_manual",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_models::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_models-Debug-157e857fe8c1f4faeb57.json",
+					"name" : "sphinx_models",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sphinx_tutorial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sphinx_tutorial-Debug-5155c597a03157c2e59d.json",
+					"name" : "sphinx_tutorial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "stats::@a16f7aa18ccba9be6aba",
+					"jsonFile" : "target-stats-Debug-e816389662c9a9b28f05.json",
+					"name" : "stats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "stats-test::@a16f7aa18ccba9be6aba",
+					"jsonFile" : "target-stats-test-Debug-0c228f2ed6492c870cd7.json",
+					"name" : "stats-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stdlib_pch-debug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stdlib_pch-debug-Debug-dd4b3baf2fede55923f7.json",
+					"name" : "stdlib_pch-debug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stdlib_pch_exec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stdlib_pch_exec-Debug-ffae66b1176c3cad54d5.json",
+					"name" : "stdlib_pch_exec",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "system-path-examples::@fad85cec64f9971644fe",
+					"jsonFile" : "target-system-path-examples-Debug-5040928e96accc1808d5.json",
+					"name" : "system-path-examples",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 34,
+					"id" : "test::@b7fcbc08bf8df37e9c1b",
+					"jsonFile" : "target-test-Debug-259c47b442cb2ceb36ab.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 55,
+					"id" : "test-runner::@c810615cce0f7acb82dc",
+					"jsonFile" : "target-test-runner-Debug-485a1d41c76b01c257fc.json",
+					"name" : "test-runner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test-runner-examples-as-tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-runner-examples-as-tests-Debug-16d0b9e675dc898d21ff.json",
+					"name" : "test-runner-examples-as-tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test-string-value-formatting::@fad85cec64f9971644fe",
+					"jsonFile" : "target-test-string-value-formatting-Debug-166114e00c1b93403113.json",
+					"name" : "test-string-value-formatting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "three-gpp-ntn-channel-example::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-three-gpp-ntn-channel-example-Debug-3849dbd948cdf81f7438.json",
+					"name" : "three-gpp-ntn-channel-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "time-probe-example::@415cf8399e1b931efb9d",
+					"jsonFile" : "target-time-probe-example-Debug-ff623fd022c3ebcf3d13.json",
+					"name" : "time-probe-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "traffic-control::@5510e62c9c27dee44e6c",
+					"jsonFile" : "target-traffic-control-Debug-390ee1178f020db1a2c0.json",
+					"name" : "traffic-control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "traffic-control-test::@5510e62c9c27dee44e6c",
+					"jsonFile" : "target-traffic-control-test-Debug-3d297ad49c84481183ba.json",
+					"name" : "traffic-control-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "tv-trans-example::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-tv-trans-example-Debug-d876b6cacc7bbb91b636.json",
+					"name" : "tv-trans-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 29,
+					"id" : "tv-trans-regional-example::@4cc75aeed31b576c080d",
+					"jsonFile" : "target-tv-trans-regional-example-Debug-d97dc865beef71f1b358.json",
+					"name" : "tv-trans-regional-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-882318b201c498b3ffc4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_antenna::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_antenna-Debug-d262a523386270dcd33f.json",
+					"name" : "uninstall_pkgconfig_antenna",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_aodv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_aodv-Debug-7b3351c67828f9998ada.json",
+					"name" : "uninstall_pkgconfig_aodv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_applications::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_applications-Debug-e23861ce563ca03ccc58.json",
+					"name" : "uninstall_pkgconfig_applications",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_bridge::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_bridge-Debug-2dcba9a530cc4064a007.json",
+					"name" : "uninstall_pkgconfig_bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_core-Debug-2fe0818819581cbfd1ee.json",
+					"name" : "uninstall_pkgconfig_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_energy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_energy-Debug-0b9f3b282e876868ea33.json",
+					"name" : "uninstall_pkgconfig_energy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_flow-monitor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_flow-monitor-Debug-75d250ea148a7e196a96.json",
+					"name" : "uninstall_pkgconfig_flow-monitor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_internet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_internet-Debug-8a7aeafb62472d7e70aa.json",
+					"name" : "uninstall_pkgconfig_internet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_internet-apps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_internet-apps-Debug-0c8307f3bf891c0f5bc3.json",
+					"name" : "uninstall_pkgconfig_internet-apps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_mobility::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_mobility-Debug-388d550d26dc7af4e997.json",
+					"name" : "uninstall_pkgconfig_mobility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_network::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_network-Debug-3d87af1276e0671cd79e.json",
+					"name" : "uninstall_pkgconfig_network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_propagation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_propagation-Debug-7a88f697a0b8d3942eaa.json",
+					"name" : "uninstall_pkgconfig_propagation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_spectrum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_spectrum-Debug-42cba43703a4ca2d552b.json",
+					"name" : "uninstall_pkgconfig_spectrum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_stats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_stats-Debug-5a06d451db0688b7e6ed.json",
+					"name" : "uninstall_pkgconfig_stats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_traffic-control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_traffic-control-Debug-98e28b0359ca49f6c652.json",
+					"name" : "uninstall_pkgconfig_traffic-control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall_pkgconfig_wifi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall_pkgconfig_wifi-Debug-0dde33782a7bcd3c3274.json",
+					"name" : "uninstall_pkgconfig_wifi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update_doxygen_version::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update_doxygen_version-Debug-8e088731e0674b1f7301.json",
+					"name" : "update_doxygen_version",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "wifi::@7d28256f07142c24adbf",
+					"jsonFile" : "target-wifi-Debug-d07ef2defe7c1f6eb972.json",
+					"name" : "wifi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-80211e-txop::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-80211e-txop-Debug-665305816264341dfc24.json",
+					"name" : "wifi-80211e-txop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-80211n-mimo::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-80211n-mimo-Debug-6902a75f9a4900f50844.json",
+					"name" : "wifi-80211n-mimo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-adhoc::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-adhoc-Debug-24d7342ad0cfc67b3739.json",
+					"name" : "wifi-adhoc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-aggregation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-aggregation-Debug-58e71223b99025ef1a13.json",
+					"name" : "wifi-aggregation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ap::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ap-Debug-884db5ee026d31524456.json",
+					"name" : "wifi-ap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-backward-compatibility::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-backward-compatibility-Debug-a5279b5379bfab9037a8.json",
+					"name" : "wifi-backward-compatibility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-bianchi::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-bianchi-Debug-ac2ebbd0adf51fb385bf.json",
+					"name" : "wifi-bianchi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-blockack::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-blockack-Debug-7c7754c59c400994895a.json",
+					"name" : "wifi-blockack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-clear-channel-cmu::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-clear-channel-cmu-Debug-f4f4ece1d86724087a9a.json",
+					"name" : "wifi-clear-channel-cmu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-co-trace-example::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-co-trace-example-Debug-b361bd2aa3b3d9281944.json",
+					"name" : "wifi-co-trace-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-dsss-validation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-dsss-validation-Debug-502ae548439704934fe9.json",
+					"name" : "wifi-dsss-validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-eht-network::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-eht-network-Debug-8d9a907547cf8bab62c2.json",
+					"name" : "wifi-eht-network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-error-models-comparison::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-error-models-comparison-Debug-e3f5bd2da5cc65b7eb9c.json",
+					"name" : "wifi-error-models-comparison",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 45,
+					"id" : "wifi-example-sim::@d39b11ddc1175e97dde4",
+					"jsonFile" : "target-wifi-example-sim-Debug-0b915a73698212864170.json",
+					"name" : "wifi-example-sim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-he-network::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-he-network-Debug-09fbdef0cf193a3994ab.json",
+					"name" : "wifi-he-network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-hidden-terminal::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-hidden-terminal-Debug-62fbf43c4e2ab0f26295.json",
+					"name" : "wifi-hidden-terminal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ht-network::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ht-network-Debug-e4aa5e2dc54e260447ea.json",
+					"name" : "wifi-ht-network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-manager-example::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-manager-example-Debug-85fafdc15de7729e1537.json",
+					"name" : "wifi-manager-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-mixed-network::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-mixed-network-Debug-4dab689752eaf09030e5.json",
+					"name" : "wifi-mixed-network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-multi-tos::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-multi-tos-Debug-d4cbd35c0c68909003ab.json",
+					"name" : "wifi-multi-tos",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-multicast::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-multicast-Debug-f70f539f10a116d5f8dd.json",
+					"name" : "wifi-multicast",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ofdm-eht-validation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ofdm-eht-validation-Debug-e79ab365e53b19f8bd34.json",
+					"name" : "wifi-ofdm-eht-validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ofdm-he-validation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ofdm-he-validation-Debug-9978f8162c3bab3ef1dc.json",
+					"name" : "wifi-ofdm-he-validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ofdm-ht-validation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ofdm-ht-validation-Debug-951397b8b54248ae22eb.json",
+					"name" : "wifi-ofdm-ht-validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-ofdm-validation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-ofdm-validation-Debug-f9d86d7dc2413ffbde70.json",
+					"name" : "wifi-ofdm-validation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-phy-rx-trace-example::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-phy-rx-trace-example-Debug-2e31142493acba621dbc.json",
+					"name" : "wifi-phy-rx-trace-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-phy-test::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-phy-test-Debug-5cff83016403cc2cf769.json",
+					"name" : "wifi-phy-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-power-adaptation-distance::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-power-adaptation-distance-Debug-b463024d7e904edd77bc.json",
+					"name" : "wifi-power-adaptation-distance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-power-adaptation-interference::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-power-adaptation-interference-Debug-699cd71110ccb0f937f5.json",
+					"name" : "wifi-power-adaptation-interference",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-rate-adaptation-distance::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-rate-adaptation-distance-Debug-4a237341c87d25a4f5c8.json",
+					"name" : "wifi-rate-adaptation-distance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-simple-adhoc::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-simple-adhoc-Debug-2bb47d633d43318a7fad.json",
+					"name" : "wifi-simple-adhoc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-simple-ht-hidden-stations::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-simple-ht-hidden-stations-Debug-29798549da991ceb6b89.json",
+					"name" : "wifi-simple-ht-hidden-stations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-simple-infra::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-simple-infra-Debug-195884576985507ff58b.json",
+					"name" : "wifi-simple-infra",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-simple-interference::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-simple-interference-Debug-06b35f7ff36d13a23468.json",
+					"name" : "wifi-simple-interference",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-sleep::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-sleep-Debug-7954ae99f11b857d9be7.json",
+					"name" : "wifi-sleep",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-spatial-reuse::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-spatial-reuse-Debug-6094d465d5d612c646cc.json",
+					"name" : "wifi-spatial-reuse",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-spectrum-per-example::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-spectrum-per-example-Debug-1e77940fd1b22c56b223.json",
+					"name" : "wifi-spectrum-per-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-spectrum-per-interference::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-spectrum-per-interference-Debug-b404d185ac8d4b52be2a.json",
+					"name" : "wifi-spectrum-per-interference",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-spectrum-saturation-example::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-spectrum-saturation-example-Debug-c0acb9347096d0eb6c71.json",
+					"name" : "wifi-spectrum-saturation-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-tcp::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-tcp-Debug-f218c6b6c985f7f5057c.json",
+					"name" : "wifi-tcp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "wifi-test::@7d28256f07142c24adbf",
+					"jsonFile" : "target-wifi-test-Debug-4d8697e31041105c8f10.json",
+					"name" : "wifi-test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-test-interference-helper::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-test-interference-helper-Debug-db564e980c983b75b8b6.json",
+					"name" : "wifi-test-interference-helper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-timing-attributes::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-timing-attributes-Debug-e488312187ace7b089b2.json",
+					"name" : "wifi-timing-attributes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "wifi-trans-example::@428dbd1c540d797cd6dd",
+					"jsonFile" : "target-wifi-trans-example-Debug-751762065c20f5fb4783.json",
+					"name" : "wifi-trans-example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-txop-aggregation::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-txop-aggregation-Debug-0c0fe69ba56b9d3b3d58.json",
+					"name" : "wifi-txop-aggregation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "wifi-vht-network::@2cb4e61c97100389e496",
+					"jsonFile" : "target-wifi-vht-network-Debug-77e8fc24a40866b40973.json",
+					"name" : "wifi-vht-network",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build",
+		"source" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

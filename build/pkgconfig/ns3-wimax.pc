@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-wimax
+Description: 
+URL: 
+Version: 3.45
+Requires:  ns3-internet ns3-propagation
+Requires.private: 
+Cflags: -I"${includedir}"  -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr -I/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2 -I/opt/homebrew/include
+Libs: -L"${libdir}" -lns3.45-wimax-debug  -lns3.45-internet-debug -lns3.45-propagation-debug
+Libs.private: -L"${libdir}" 

@@ -1,0 +1,184 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/internet/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 338,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-internet-debug.dylib"
+			],
+			"targetId" : "internet::@cf20f20ea777b8d334b4",
+			"targetIndex" : 43,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/internet/helper/internet-stack-helper.h",
+				"src/internet/helper/internet-trace-helper.h",
+				"src/internet/helper/ipv4-address-helper.h",
+				"src/internet/helper/ipv4-global-routing-helper.h",
+				"src/internet/helper/ipv4-interface-container.h",
+				"src/internet/helper/ipv4-list-routing-helper.h",
+				"src/internet/helper/ipv4-routing-helper.h",
+				"src/internet/helper/ipv4-static-routing-helper.h",
+				"src/internet/helper/ipv6-address-helper.h",
+				"src/internet/helper/ipv6-interface-container.h",
+				"src/internet/helper/ipv6-list-routing-helper.h",
+				"src/internet/helper/ipv6-routing-helper.h",
+				"src/internet/helper/ipv6-static-routing-helper.h",
+				"src/internet/helper/neighbor-cache-helper.h",
+				"src/internet/helper/rip-helper.h",
+				"src/internet/helper/ripng-helper.h",
+				"src/internet/model/arp-cache.h",
+				"src/internet/model/arp-header.h",
+				"src/internet/model/arp-l3-protocol.h",
+				"src/internet/model/arp-queue-disc-item.h",
+				"src/internet/model/candidate-queue.h",
+				"src/internet/model/global-route-manager-impl.h",
+				"src/internet/model/global-route-manager.h",
+				"src/internet/model/global-router-interface.h",
+				"src/internet/model/icmpv4-l4-protocol.h",
+				"src/internet/model/icmpv4.h",
+				"src/internet/model/icmpv6-header.h",
+				"src/internet/model/icmpv6-l4-protocol.h",
+				"src/internet/model/ip-l4-protocol.h",
+				"src/internet/model/ipv4-address-generator.h",
+				"src/internet/model/ipv4-end-point-demux.h",
+				"src/internet/model/ipv4-end-point.h",
+				"src/internet/model/ipv4-global-routing.h",
+				"src/internet/model/ipv4-header.h",
+				"src/internet/model/ipv4-interface-address.h",
+				"src/internet/model/ipv4-interface.h",
+				"src/internet/model/ipv4-l3-protocol.h",
+				"src/internet/model/ipv4-list-routing.h",
+				"src/internet/model/ipv4-packet-filter.h",
+				"src/internet/model/ipv4-packet-info-tag.h",
+				"src/internet/model/ipv4-packet-probe.h",
+				"src/internet/model/ipv4-queue-disc-item.h",
+				"src/internet/model/ipv4-raw-socket-factory.h",
+				"src/internet/model/ipv4-raw-socket-impl.h",
+				"src/internet/model/ipv4-route.h",
+				"src/internet/model/ipv4-routing-protocol.h",
+				"src/internet/model/ipv4-routing-table-entry.h",
+				"src/internet/model/ipv4-static-routing.h",
+				"src/internet/model/ipv4.h",
+				"src/internet/model/ipv6-address-generator.h",
+				"src/internet/model/ipv6-end-point-demux.h",
+				"src/internet/model/ipv6-end-point.h",
+				"src/internet/model/ipv6-extension-demux.h",
+				"src/internet/model/ipv6-extension-header.h",
+				"src/internet/model/ipv6-extension.h",
+				"src/internet/model/ipv6-header.h",
+				"src/internet/model/ipv6-interface-address.h",
+				"src/internet/model/ipv6-interface.h",
+				"src/internet/model/ipv6-l3-protocol.h",
+				"src/internet/model/ipv6-list-routing.h",
+				"src/internet/model/ipv6-option-header.h",
+				"src/internet/model/ipv6-option.h",
+				"src/internet/model/ipv6-packet-filter.h",
+				"src/internet/model/ipv6-packet-info-tag.h",
+				"src/internet/model/ipv6-packet-probe.h",
+				"src/internet/model/ipv6-pmtu-cache.h",
+				"src/internet/model/ipv6-queue-disc-item.h",
+				"src/internet/model/ipv6-raw-socket-factory.h",
+				"src/internet/model/ipv6-route.h",
+				"src/internet/model/ipv6-routing-protocol.h",
+				"src/internet/model/ipv6-routing-table-entry.h",
+				"src/internet/model/ipv6-static-routing.h",
+				"src/internet/model/ipv6.h",
+				"src/internet/model/loopback-net-device.h",
+				"src/internet/model/ndisc-cache.h",
+				"src/internet/model/rip-header.h",
+				"src/internet/model/rip.h",
+				"src/internet/model/ripng-header.h",
+				"src/internet/model/ripng.h",
+				"src/internet/model/rtt-estimator.h",
+				"src/internet/model/tcp-bbr.h",
+				"src/internet/model/tcp-bic.h",
+				"src/internet/model/tcp-congestion-ops.h",
+				"src/internet/model/tcp-cubic.h",
+				"src/internet/model/tcp-dctcp.h",
+				"src/internet/model/tcp-header.h",
+				"src/internet/model/tcp-highspeed.h",
+				"src/internet/model/tcp-htcp.h",
+				"src/internet/model/tcp-hybla.h",
+				"src/internet/model/tcp-illinois.h",
+				"src/internet/model/tcp-l4-protocol.h",
+				"src/internet/model/tcp-ledbat.h",
+				"src/internet/model/tcp-linux-reno.h",
+				"src/internet/model/tcp-lp.h",
+				"src/internet/model/tcp-option-rfc793.h",
+				"src/internet/model/tcp-option-sack-permitted.h",
+				"src/internet/model/tcp-option-sack.h",
+				"src/internet/model/tcp-option-ts.h",
+				"src/internet/model/tcp-option-winscale.h",
+				"src/internet/model/tcp-option.h",
+				"src/internet/model/tcp-prr-recovery.h",
+				"src/internet/model/tcp-rate-ops.h",
+				"src/internet/model/tcp-recovery-ops.h",
+				"src/internet/model/tcp-rx-buffer.h",
+				"src/internet/model/tcp-scalable.h",
+				"src/internet/model/tcp-socket-base.h",
+				"src/internet/model/tcp-socket-factory.h",
+				"src/internet/model/tcp-socket-state.h",
+				"src/internet/model/tcp-socket.h",
+				"src/internet/model/tcp-tx-buffer.h",
+				"src/internet/model/tcp-tx-item.h",
+				"src/internet/model/tcp-vegas.h",
+				"src/internet/model/tcp-veno.h",
+				"src/internet/model/tcp-westwood-plus.h",
+				"src/internet/model/tcp-yeah.h",
+				"src/internet/model/udp-header.h",
+				"src/internet/model/udp-l4-protocol.h",
+				"src/internet/model/udp-socket-factory.h",
+				"src/internet/model/udp-socket.h",
+				"src/internet/model/windowed-filter.h",
+				"build/include/ns3/internet-module.h",
+				"build/include/ns3/internet-export.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/internet",
+		"source" : "src/internet"
+	}
+}

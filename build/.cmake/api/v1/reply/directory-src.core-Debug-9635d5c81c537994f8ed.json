@@ -1,0 +1,166 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/core/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 346,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-core-debug.dylib"
+			],
+			"targetId" : "core::@0618756b1ff51bca1a0e",
+			"targetIndex" : 24,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"build/include/ns3/core-config.h",
+				"src/core/model/int64x64-128.h",
+				"src/core/model/example-as-test.h",
+				"src/core/helper/csv-reader.h",
+				"src/core/helper/event-garbage-collector.h",
+				"src/core/helper/random-variable-stream-helper.h",
+				"src/core/model/abort.h",
+				"src/core/model/ascii-file.h",
+				"src/core/model/ascii-test.h",
+				"src/core/model/assert.h",
+				"src/core/model/attribute-accessor-helper.h",
+				"src/core/model/attribute-construction-list.h",
+				"src/core/model/attribute-container.h",
+				"src/core/model/attribute-helper.h",
+				"src/core/model/attribute.h",
+				"src/core/model/boolean.h",
+				"src/core/model/breakpoint.h",
+				"src/core/model/build-profile.h",
+				"src/core/model/calendar-scheduler.h",
+				"src/core/model/callback.h",
+				"src/core/model/command-line.h",
+				"src/core/model/config.h",
+				"src/core/model/default-deleter.h",
+				"src/core/model/default-simulator-impl.h",
+				"src/core/model/demangle.h",
+				"src/core/model/deprecated.h",
+				"src/core/model/des-metrics.h",
+				"src/core/model/double.h",
+				"src/core/model/enum.h",
+				"src/core/model/event-id.h",
+				"src/core/model/event-impl.h",
+				"src/core/model/fatal-error.h",
+				"src/core/model/fatal-impl.h",
+				"src/core/model/fd-reader.h",
+				"src/core/model/environment-variable.h",
+				"src/core/model/global-value.h",
+				"src/core/model/hash-fnv.h",
+				"src/core/model/hash-function.h",
+				"src/core/model/hash-murmur3.h",
+				"src/core/model/hash.h",
+				"src/core/model/heap-scheduler.h",
+				"src/core/model/int64x64-double.h",
+				"src/core/model/int64x64.h",
+				"src/core/model/integer.h",
+				"src/core/model/length.h",
+				"src/core/model/list-scheduler.h",
+				"src/core/model/log-macros-disabled.h",
+				"src/core/model/log-macros-enabled.h",
+				"src/core/model/log.h",
+				"src/core/model/make-event.h",
+				"src/core/model/map-scheduler.h",
+				"src/core/model/math.h",
+				"src/core/model/names.h",
+				"src/core/model/node-printer.h",
+				"src/core/model/nstime.h",
+				"src/core/model/object-base.h",
+				"src/core/model/object-factory.h",
+				"src/core/model/object-map.h",
+				"src/core/model/object-ptr-container.h",
+				"src/core/model/object-vector.h",
+				"src/core/model/object.h",
+				"src/core/model/pair.h",
+				"src/core/model/pointer.h",
+				"src/core/model/priority-queue-scheduler.h",
+				"src/core/model/ptr.h",
+				"src/core/model/random-variable-stream.h",
+				"src/core/model/rng-seed-manager.h",
+				"src/core/model/rng-stream.h",
+				"src/core/model/scheduler.h",
+				"src/core/model/show-progress.h",
+				"src/core/model/shuffle.h",
+				"src/core/model/simple-ref-count.h",
+				"src/core/model/simulation-singleton.h",
+				"src/core/model/simulator-impl.h",
+				"src/core/model/simulator.h",
+				"src/core/model/singleton.h",
+				"src/core/model/string.h",
+				"src/core/model/synchronizer.h",
+				"src/core/model/system-path.h",
+				"src/core/model/system-wall-clock-ms.h",
+				"src/core/model/system-wall-clock-timestamp.h",
+				"src/core/model/test.h",
+				"src/core/model/time-printer.h",
+				"src/core/model/timer-impl.h",
+				"src/core/model/timer.h",
+				"src/core/model/trace-source-accessor.h",
+				"src/core/model/traced-callback.h",
+				"src/core/model/traced-value.h",
+				"src/core/model/trickle-timer.h",
+				"src/core/model/tuple.h",
+				"src/core/model/type-id.h",
+				"src/core/model/type-name.h",
+				"src/core/model/type-traits.h",
+				"src/core/model/uinteger.h",
+				"src/core/model/uniform-random-bit-generator.h",
+				"src/core/model/valgrind.h",
+				"src/core/model/vector.h",
+				"src/core/model/warnings.h",
+				"src/core/model/watchdog.h",
+				"src/core/model/realtime-simulator-impl.h",
+				"src/core/model/wall-clock-synchronizer.h",
+				"src/core/model/val-array.h",
+				"src/core/model/matrix-array.h",
+				"build/include/ns3/core-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/core",
+		"source" : "src/core"
+	}
+}

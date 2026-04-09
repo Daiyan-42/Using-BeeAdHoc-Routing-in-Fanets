@@ -1,0 +1,54 @@
+#ifdef NS3_MODULE_COMPILATION 
+    error "Do not include ns3 module aggregator headers from other modules these are meant only for end user scripts." 
+#endif 
+#ifndef NS3_MODULE_LORAWAN
+    // Module headers: 
+    #include <ns3/lora-net-device.h>
+    #include <ns3/lorawan-mac.h>
+    #include <ns3/lora-phy.h>
+    #include <ns3/building-penetration-loss.h>
+    #include <ns3/correlated-shadowing-propagation-loss-model.h>
+    #include <ns3/lora-channel.h>
+    #include <ns3/lora-interference-helper.h>
+    #include <ns3/gateway-lorawan-mac.h>
+    #include <ns3/end-device-lorawan-mac.h>
+    #include <ns3/class-a-end-device-lorawan-mac.h>
+    #include <ns3/gateway-lora-phy.h>
+    #include <ns3/end-device-lora-phy.h>
+    #include <ns3/simple-end-device-lora-phy.h>
+    #include <ns3/simple-gateway-lora-phy.h>
+    #include <ns3/sub-band.h>
+    #include <ns3/logical-lora-channel.h>
+    #include <ns3/logical-lora-channel-helper.h>
+    #include <ns3/periodic-sender.h>
+    #include <ns3/one-shot-sender.h>
+    #include <ns3/forwarder.h>
+    #include <ns3/lorawan-mac-header.h>
+    #include <ns3/lora-frame-header.h>
+    #include <ns3/mac-command.h>
+    #include <ns3/lora-device-address.h>
+    #include <ns3/lora-device-address-generator.h>
+    #include <ns3/lora-tag.h>
+    #include <ns3/network-server.h>
+    #include <ns3/network-status.h>
+    #include <ns3/network-controller.h>
+    #include <ns3/network-controller-components.h>
+    #include <ns3/network-scheduler.h>
+    #include <ns3/end-device-status.h>
+    #include <ns3/gateway-status.h>
+    #include <ns3/lora-radio-energy-model.h>
+    #include <ns3/lora-tx-current-model.h>
+    #include <ns3/lora-utils.h>
+    #include <ns3/adr-component.h>
+    #include <ns3/hex-grid-position-allocator.h>
+    #include <ns3/lora-radio-energy-model-helper.h>
+    #include <ns3/lora-helper.h>
+    #include <ns3/lora-phy-helper.h>
+    #include <ns3/lorawan-mac-helper.h>
+    #include <ns3/periodic-sender-helper.h>
+    #include <ns3/one-shot-sender-helper.h>
+    #include <ns3/forwarder-helper.h>
+    #include <ns3/network-server-helper.h>
+    #include <ns3/lora-packet-tracker.h>
+    #include <ns3/utilities.h>
+#endif 

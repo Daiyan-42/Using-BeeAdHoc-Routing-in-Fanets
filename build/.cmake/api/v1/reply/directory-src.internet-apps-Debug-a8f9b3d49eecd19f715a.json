@@ -1,0 +1,81 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/internet-apps/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-internet-apps-debug.dylib"
+			],
+			"targetId" : "internet-apps::@1ed805a9b59b824e59c4",
+			"targetIndex" : 44,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/internet-apps/helper/dhcp-helper.h",
+				"src/internet-apps/helper/dhcp6-helper.h",
+				"src/internet-apps/helper/ping-helper.h",
+				"src/internet-apps/helper/radvd-helper.h",
+				"src/internet-apps/helper/v4traceroute-helper.h",
+				"src/internet-apps/model/dhcp-client.h",
+				"src/internet-apps/model/dhcp-header.h",
+				"src/internet-apps/model/dhcp-server.h",
+				"src/internet-apps/model/dhcp6-client.h",
+				"src/internet-apps/model/dhcp6-duid.h",
+				"src/internet-apps/model/dhcp6-header.h",
+				"src/internet-apps/model/dhcp6-options.h",
+				"src/internet-apps/model/dhcp6-server.h",
+				"src/internet-apps/model/ping.h",
+				"src/internet-apps/model/radvd-interface.h",
+				"src/internet-apps/model/radvd-prefix.h",
+				"src/internet-apps/model/radvd.h",
+				"src/internet-apps/model/v4traceroute.h",
+				"build/include/ns3/internet-apps-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/internet-apps",
+		"source" : "src/internet-apps"
+	}
+}

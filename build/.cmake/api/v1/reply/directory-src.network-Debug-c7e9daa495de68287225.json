@@ -1,0 +1,140 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/network/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 155,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-network-debug.dylib"
+			],
+			"targetId" : "network::@311edf953348ef8fadde",
+			"targetIndex" : 63,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/network/helper/application-container.h",
+				"src/network/helper/application-helper.h",
+				"src/network/helper/delay-jitter-estimation.h",
+				"src/network/helper/net-device-container.h",
+				"src/network/helper/node-container.h",
+				"src/network/helper/packet-socket-helper.h",
+				"src/network/helper/simple-net-device-helper.h",
+				"src/network/helper/trace-helper.h",
+				"src/network/model/address.h",
+				"src/network/model/application.h",
+				"src/network/model/buffer.h",
+				"src/network/model/byte-tag-list.h",
+				"src/network/model/channel-list.h",
+				"src/network/model/channel.h",
+				"src/network/model/chunk.h",
+				"src/network/model/header.h",
+				"src/network/model/net-device.h",
+				"src/network/model/nix-vector.h",
+				"src/network/model/node-list.h",
+				"src/network/model/node.h",
+				"src/network/model/packet-metadata.h",
+				"src/network/model/packet-tag-list.h",
+				"src/network/model/packet.h",
+				"src/network/model/socket-factory.h",
+				"src/network/model/socket.h",
+				"src/network/model/tag-buffer.h",
+				"src/network/model/tag.h",
+				"src/network/model/trailer.h",
+				"src/network/test/header-serialization-test.h",
+				"src/network/utils/address-utils.h",
+				"src/network/utils/bit-deserializer.h",
+				"src/network/utils/bit-serializer.h",
+				"src/network/utils/crc32.h",
+				"src/network/utils/data-rate.h",
+				"src/network/utils/drop-tail-queue.h",
+				"src/network/utils/dynamic-queue-limits.h",
+				"src/network/utils/error-channel.h",
+				"src/network/utils/error-model.h",
+				"src/network/utils/ethernet-header.h",
+				"src/network/utils/ethernet-trailer.h",
+				"src/network/utils/flow-id-tag.h",
+				"src/network/utils/generic-phy.h",
+				"src/network/utils/inet-socket-address.h",
+				"src/network/utils/inet6-socket-address.h",
+				"src/network/utils/ipv4-address.h",
+				"src/network/utils/ipv6-address.h",
+				"src/network/utils/llc-snap-header.h",
+				"src/network/utils/lollipop-counter.h",
+				"src/network/utils/mac16-address.h",
+				"src/network/utils/mac48-address.h",
+				"src/network/utils/mac64-address.h",
+				"src/network/utils/mac8-address.h",
+				"src/network/utils/net-device-queue-interface.h",
+				"src/network/utils/output-stream-wrapper.h",
+				"src/network/utils/packet-burst.h",
+				"src/network/utils/packet-data-calculators.h",
+				"src/network/utils/packet-probe.h",
+				"src/network/utils/packet-socket-address.h",
+				"src/network/utils/packet-socket-client.h",
+				"src/network/utils/packet-socket-factory.h",
+				"src/network/utils/packet-socket-server.h",
+				"src/network/utils/packet-socket.h",
+				"src/network/utils/packetbb.h",
+				"src/network/utils/pcap-file-wrapper.h",
+				"src/network/utils/pcap-file.h",
+				"src/network/utils/pcap-test.h",
+				"src/network/utils/queue-fwd.h",
+				"src/network/utils/queue-item.h",
+				"src/network/utils/queue-limits.h",
+				"src/network/utils/queue-size.h",
+				"src/network/utils/queue.h",
+				"src/network/utils/radiotap-header.h",
+				"src/network/utils/sequence-number.h",
+				"src/network/utils/simple-channel.h",
+				"src/network/utils/simple-net-device.h",
+				"src/network/utils/sll-header.h",
+				"src/network/utils/timestamp-tag.h",
+				"build/include/ns3/network-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/network",
+		"source" : "src/network"
+	}
+}

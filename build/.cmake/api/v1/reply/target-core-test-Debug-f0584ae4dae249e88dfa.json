@@ -1,0 +1,649 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libns3.45-core-test-debug.dylib"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib_tests",
+			"build_lib",
+			"link_directories",
+			"include",
+			"target_link_libraries",
+			"target_precompile_headers",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"target_compile_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/core/CMakeLists.txt",
+			"build-support/custom-modules/ns3-output-directory.cmake",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt",
+			"build-support/custom-modules/ns3-platform-support.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 346,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 265,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 538,
+				"parent" : 2
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 116,
+				"parent" : 4
+			},
+			{
+				"file" : 3,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 35,
+				"parent" : 6
+			},
+			{
+				"file" : 2,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 91,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 547,
+				"parent" : 2
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 562,
+				"parent" : 2
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 178,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 221,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 223,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 226,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 618,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 543,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 1155,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 139,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 1150,
+				"parent" : 12
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 558,
+				"parent" : 2
+			},
+			{
+				"command" : 9,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 41,
+				"parent" : 6
+			},
+			{
+				"file" : 5,
+				"parent" : 24
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 44,
+				"parent" : 25
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 483,
+				"parent" : 12
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 545,
+				"parent" : 12
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 620,
+				"parent" : 12
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 857,
+				"parent" : 12
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=c++20 -arch arm64 -fPIC   -Xclang -fno-pch-timestamp"
+				},
+				{
+					"backtrace" : 13,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-Winvalid-pch -Xclang -include-pch -Xclang /Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 16,
+					"define" : "HAVE_BOOST"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "HAVE_BOOST_UNITS"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "HAVE_LIBXML2"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "NS_TEST_SOURCEDIR=\"src/core/test\""
+				},
+				{
+					"backtrace" : 23,
+					"define" : "PROJECT_SOURCE_PATH=\"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45\""
+				},
+				{
+					"backtrace" : 26,
+					"define" : "__APPLE__"
+				},
+				{
+					"define" : "core_test_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 27,
+					"path" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/include"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 11,
+			"id" : "stdlib_pch-debug::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "core::@0618756b1ff51bca1a0e"
+		}
+	],
+	"id" : "core-test::@0618756b1ff51bca1a0e",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 9,
+				"fragment" : "-L/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "lib/libns3.45-core-debug.dylib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "core-test",
+	"nameOnDisk" : "libns3.45-core-test-debug.dylib",
+	"paths" : 
+	{
+		"build" : "src/core",
+		"source" : "src/core"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				33
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/examples-as-tests-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/attribute-container-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/attribute-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/build-profile-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/callback-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/command-line-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/config-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/environment-variable-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/event-garbage-collector-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/global-value-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/hash-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/int64x64-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/length-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/many-uniform-random-variables-one-get-value-call-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/names-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/object-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/one-uniform-random-variable-many-get-value-calls-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/pair-value-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/ptr-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/sample-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/simulator-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/splitstring-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/threaded-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/time-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/timer-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/traced-callback-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/trickle-timer-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/tuple-value-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/type-id-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/type-traits-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/watchdog-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/val-array-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/test/matrix-array-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

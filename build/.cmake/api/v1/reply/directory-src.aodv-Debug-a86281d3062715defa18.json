@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/aodv/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-aodv-debug.dylib"
+			],
+			"targetId" : "aodv::@703ac9d15d05cf47735c",
+			"targetIndex" : 7,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/aodv/helper/aodv-helper.h",
+				"src/aodv/model/aodv-dpd.h",
+				"src/aodv/model/aodv-id-cache.h",
+				"src/aodv/model/aodv-neighbor.h",
+				"src/aodv/model/aodv-packet.h",
+				"src/aodv/model/aodv-routing-protocol.h",
+				"src/aodv/model/aodv-rqueue.h",
+				"src/aodv/model/aodv-rtable.h",
+				"build/include/ns3/aodv-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/aodv",
+		"source" : "src/aodv"
+	}
+}

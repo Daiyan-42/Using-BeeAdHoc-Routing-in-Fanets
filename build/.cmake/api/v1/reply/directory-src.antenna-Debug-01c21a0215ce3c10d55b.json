@@ -1,0 +1,73 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/antenna/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-antenna-debug.dylib"
+			],
+			"targetId" : "antenna::@000737a0949b1597daab",
+			"targetIndex" : 5,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/antenna/model/circular-aperture-antenna-model.h",
+				"src/antenna/model/angles.h",
+				"src/antenna/model/antenna-model.h",
+				"src/antenna/model/cosine-antenna-model.h",
+				"src/antenna/model/isotropic-antenna-model.h",
+				"src/antenna/model/parabolic-antenna-model.h",
+				"src/antenna/model/phased-array-model.h",
+				"src/antenna/model/three-gpp-antenna-model.h",
+				"src/antenna/model/uniform-planar-array.h",
+				"src/antenna/utils/symmetric-adjacency-matrix.h",
+				"build/include/ns3/antenna-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/antenna",
+		"source" : "src/antenna"
+	}
+}

@@ -1,0 +1,209 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"process_options",
+			"add_dependencies",
+			"examples_as_tests_dependencies",
+			"build_lib_tests",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt",
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/core/CMakeLists.txt",
+			"src/energy/CMakeLists.txt",
+			"src/mobility/CMakeLists.txt",
+			"src/network/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 178,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 821,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 346,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 566,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 6
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 1,
+				"parent" : 10
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 11
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 566,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 13
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 5,
+				"line" : 1,
+				"parent" : 15
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 16
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 566,
+				"parent" : 17
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 18
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 155,
+				"parent" : 20
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 265,
+				"parent" : 21
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 566,
+				"parent" : 22
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 23
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 584,
+				"parent" : 23
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 7,
+			"id" : "command-line-example::@fad85cec64f9971644fe"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "sample-random-variable::@fad85cec64f9971644fe"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "sample-simulator::@fad85cec64f9971644fe"
+		},
+		{
+			"backtrace" : 14,
+			"id" : "generic-battery-discharge-example::@29acedd5ca1ded80d01c"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "mobility-trace-example::@7724fcf1e14e3a7fd020"
+		},
+		{
+			"backtrace" : 24,
+			"id" : "bit-serializer::@4b49282bd3eaf586512e"
+		},
+		{
+			"backtrace" : 25,
+			"id" : "packet-socket-apps::@4b49282bd3eaf586512e"
+		}
+	],
+	"id" : "test-runner-examples-as-tests::@6890427a1f51a3e7e1df",
+	"name" : "test-runner-examples-as-tests",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

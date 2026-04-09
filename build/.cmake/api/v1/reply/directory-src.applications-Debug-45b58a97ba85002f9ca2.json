@@ -1,0 +1,88 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/applications/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-applications-debug.dylib"
+			],
+			"targetId" : "applications::@a48e303ef543a0192510",
+			"targetIndex" : 10,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/applications/helper/bulk-send-helper.h",
+				"src/applications/helper/on-off-helper.h",
+				"src/applications/helper/packet-sink-helper.h",
+				"src/applications/helper/three-gpp-http-helper.h",
+				"src/applications/helper/udp-client-server-helper.h",
+				"src/applications/helper/udp-echo-helper.h",
+				"src/applications/model/application-packet-probe.h",
+				"src/applications/model/bulk-send-application.h",
+				"src/applications/model/onoff-application.h",
+				"src/applications/model/packet-loss-counter.h",
+				"src/applications/model/packet-sink.h",
+				"src/applications/model/seq-ts-echo-header.h",
+				"src/applications/model/seq-ts-header.h",
+				"src/applications/model/seq-ts-size-header.h",
+				"src/applications/model/sink-application.h",
+				"src/applications/model/source-application.h",
+				"src/applications/model/three-gpp-http-client.h",
+				"src/applications/model/three-gpp-http-header.h",
+				"src/applications/model/three-gpp-http-server.h",
+				"src/applications/model/three-gpp-http-variables.h",
+				"src/applications/model/udp-client.h",
+				"src/applications/model/udp-echo-client.h",
+				"src/applications/model/udp-echo-server.h",
+				"src/applications/model/udp-server.h",
+				"src/applications/model/udp-trace-client.h",
+				"build/include/ns3/applications-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/applications",
+		"source" : "src/applications"
+	}
+}

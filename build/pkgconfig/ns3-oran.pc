@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-oran
+Description: 
+URL: 
+Version: 3.45
+Requires:  ns3-core ns3-network ns3-lte
+Requires.private: 
+Cflags: -I"${includedir}"  -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr -I/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2 -I/opt/homebrew/include -I/Users/daiyan/libtorch/include/torch -I/Users/daiyan/libtorch/include
+Libs: -L"${libdir}" -lns3.45-oran-debug  /Users/daiyan/libtorch/lib/libtorch.dylib -lns3.45-core-debug -lns3.45-network-debug -lns3.45-lte-debug /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd /Users/daiyan/libtorch/lib/libtorch.dylib
+Libs.private: -L"${libdir}" 

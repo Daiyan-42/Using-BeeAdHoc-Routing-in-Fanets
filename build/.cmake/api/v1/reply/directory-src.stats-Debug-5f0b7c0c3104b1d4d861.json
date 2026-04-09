@@ -1,0 +1,98 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/stats/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 75,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-stats-debug.dylib"
+			],
+			"targetId" : "stats::@a16f7aa18ccba9be6aba",
+			"targetIndex" : 96,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/stats/model/sqlite-output.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/stats/model/sqlite-data-output.h",
+				"src/stats/helper/file-helper.h",
+				"src/stats/helper/gnuplot-helper.h",
+				"src/stats/model/average.h",
+				"src/stats/model/basic-data-calculators.h",
+				"src/stats/model/boolean-probe.h",
+				"src/stats/model/data-calculator.h",
+				"src/stats/model/data-collection-object.h",
+				"src/stats/model/data-collector.h",
+				"src/stats/model/data-output-interface.h",
+				"src/stats/model/double-probe.h",
+				"src/stats/model/file-aggregator.h",
+				"src/stats/model/get-wildcard-matches.h",
+				"src/stats/model/gnuplot-aggregator.h",
+				"src/stats/model/gnuplot.h",
+				"src/stats/model/histogram.h",
+				"src/stats/model/omnet-data-output.h",
+				"src/stats/model/probe.h",
+				"src/stats/model/stats.h",
+				"src/stats/model/time-data-calculators.h",
+				"src/stats/model/time-probe.h",
+				"src/stats/model/time-series-adaptor.h",
+				"src/stats/model/uinteger-16-probe.h",
+				"src/stats/model/uinteger-32-probe.h",
+				"src/stats/model/uinteger-8-probe.h",
+				"build/include/ns3/stats-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/stats",
+		"source" : "src/stats"
+	}
+}

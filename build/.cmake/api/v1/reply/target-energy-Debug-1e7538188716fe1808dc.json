@@ -1,0 +1,612 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libns3.45-energy-debug.dylib"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"build_lib",
+			"install",
+			"link_directories",
+			"include",
+			"target_link_libraries",
+			"build_lib_reexport_third_party_libraries",
+			"target_precompile_headers",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/energy/CMakeLists.txt",
+			"build-support/custom-modules/ns3-output-directory.cmake",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt",
+			"src/network/CMakeLists.txt",
+			"src/stats/CMakeLists.txt",
+			"build-support/custom-modules/ns3-platform-support.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 116,
+				"parent" : 4
+			},
+			{
+				"file" : 3,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 35,
+				"parent" : 6
+			},
+			{
+				"file" : 2,
+				"parent" : 7
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 91,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 229,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 355,
+				"parent" : 10
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 155,
+				"parent" : 12
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 229,
+				"parent" : 13
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 355,
+				"parent" : 14
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 1,
+				"file" : 6,
+				"line" : 75,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 229,
+				"parent" : 17
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 355,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 207,
+				"parent" : 1
+			},
+			{
+				"command" : 9,
+				"file" : 4,
+				"line" : 178,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 221,
+				"parent" : 21
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 223,
+				"parent" : 21
+			},
+			{
+				"command" : 8,
+				"file" : 3,
+				"line" : 226,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 618,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 543,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 1155,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 139,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 1150,
+				"parent" : 21
+			},
+			{
+				"command" : 10,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 41,
+				"parent" : 6
+			},
+			{
+				"file" : 7,
+				"parent" : 31
+			},
+			{
+				"command" : 10,
+				"file" : 7,
+				"line" : 44,
+				"parent" : 32
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 483,
+				"parent" : 21
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 545,
+				"parent" : 21
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 620,
+				"parent" : 21
+			},
+			{
+				"command" : 11,
+				"file" : 3,
+				"line" : 857,
+				"parent" : 21
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=c++20 -arch arm64 -fPIC   -Xclang -fno-pch-timestamp"
+				},
+				{
+					"backtrace" : 22,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 23,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 24,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 24,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				},
+				{
+					"fragment" : "-Winvalid-pch -Xclang -include-pch -Xclang /Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 11,
+					"define" : "HAVE_BOOST"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "HAVE_BOOST_UNITS"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "HAVE_LIBXML2"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 27,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 28,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 29,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 30,
+					"define" : "PROJECT_SOURCE_PATH=\"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45\""
+				},
+				{
+					"backtrace" : 33,
+					"define" : "__APPLE__"
+				},
+				{
+					"define" : "energy_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 34,
+					"path" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/include"
+				},
+				{
+					"backtrace" : 35,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+				},
+				{
+					"backtrace" : 36,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 20,
+			"id" : "stdlib_pch-debug::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "core::@0618756b1ff51bca1a0e"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "network::@311edf953348ef8fadde"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "stats::@a16f7aa18ccba9be6aba"
+		}
+	],
+	"id" : "energy::@64b7acd7d729390dea74",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 9,
+				"fragment" : "-L/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "lib/libns3.45-network-debug.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "lib/libns3.45-stats-debug.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "lib/libns3.45-core-debug.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "energy",
+	"nameOnDisk" : "libns3.45-energy-debug.dylib",
+	"paths" : 
+	{
+		"build" : "src/energy",
+		"source" : "src/energy"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				19
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/basic-energy-harvester-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/basic-energy-source-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/energy-harvester-container.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/energy-harvester-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/energy-model-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/energy-source-container.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/generic-battery-model-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/li-ion-energy-source-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/helper/rv-battery-model-helper.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/basic-energy-harvester.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/basic-energy-source.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/device-energy-model-container.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/device-energy-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/energy-harvester.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/energy-source.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/generic-battery-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/li-ion-energy-source.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/rv-battery-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "src/energy/model/simple-device-energy-model.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "build/CMakeFiles/stdlib_pch-debug.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

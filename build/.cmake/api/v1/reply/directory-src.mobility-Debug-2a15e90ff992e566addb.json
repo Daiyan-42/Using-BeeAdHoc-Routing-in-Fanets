@@ -1,0 +1,84 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/mobility/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-mobility-debug.dylib"
+			],
+			"targetId" : "mobility::@2e8c3d564dbe2f6b990d",
+			"targetIndex" : 60,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/mobility/helper/group-mobility-helper.h",
+				"src/mobility/helper/mobility-helper.h",
+				"src/mobility/helper/ns2-mobility-helper.h",
+				"src/mobility/model/box.h",
+				"src/mobility/model/constant-acceleration-mobility-model.h",
+				"src/mobility/model/constant-position-mobility-model.h",
+				"src/mobility/model/constant-velocity-helper.h",
+				"src/mobility/model/constant-velocity-mobility-model.h",
+				"src/mobility/model/gauss-markov-mobility-model.h",
+				"src/mobility/model/geocentric-constant-position-mobility-model.h",
+				"src/mobility/model/geographic-positions.h",
+				"src/mobility/model/hierarchical-mobility-model.h",
+				"src/mobility/model/mobility-model.h",
+				"src/mobility/model/position-allocator.h",
+				"src/mobility/model/random-direction-2d-mobility-model.h",
+				"src/mobility/model/random-walk-2d-mobility-model.h",
+				"src/mobility/model/random-waypoint-mobility-model.h",
+				"src/mobility/model/rectangle.h",
+				"src/mobility/model/steady-state-random-waypoint-mobility-model.h",
+				"src/mobility/model/waypoint-mobility-model.h",
+				"src/mobility/model/waypoint.h",
+				"build/include/ns3/mobility-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/mobility",
+		"source" : "src/mobility"
+	}
+}

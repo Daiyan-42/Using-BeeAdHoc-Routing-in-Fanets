@@ -1,0 +1,101 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/spectrum/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 82,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-spectrum-debug.dylib"
+			],
+			"targetId" : "spectrum::@edd78237c376ce4d0dc6",
+			"targetIndex" : 88,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.h",
+				"src/spectrum/helper/spectrum-analyzer-helper.h",
+				"src/spectrum/helper/spectrum-helper.h",
+				"src/spectrum/helper/tv-spectrum-transmitter-helper.h",
+				"src/spectrum/helper/waveform-generator-helper.h",
+				"src/spectrum/model/aloha-noack-mac-header.h",
+				"src/spectrum/model/aloha-noack-net-device.h",
+				"src/spectrum/model/constant-spectrum-propagation-loss.h",
+				"src/spectrum/model/friis-spectrum-propagation-loss.h",
+				"src/spectrum/model/half-duplex-ideal-phy-signal-parameters.h",
+				"src/spectrum/model/half-duplex-ideal-phy.h",
+				"src/spectrum/model/ism-spectrum-value-helper.h",
+				"src/spectrum/model/matrix-based-channel-model.h",
+				"src/spectrum/model/microwave-oven-spectrum-value-helper.h",
+				"src/spectrum/model/two-ray-spectrum-propagation-loss-model.h",
+				"src/spectrum/model/multi-model-spectrum-channel.h",
+				"src/spectrum/model/non-communicating-net-device.h",
+				"src/spectrum/model/single-model-spectrum-channel.h",
+				"src/spectrum/model/spectrum-analyzer.h",
+				"src/spectrum/model/spectrum-channel.h",
+				"src/spectrum/model/spectrum-converter.h",
+				"src/spectrum/model/spectrum-error-model.h",
+				"src/spectrum/model/spectrum-interference.h",
+				"src/spectrum/model/spectrum-model-300kHz-300GHz-log.h",
+				"src/spectrum/model/spectrum-model-ism2400MHz-res1MHz.h",
+				"src/spectrum/model/spectrum-model.h",
+				"src/spectrum/model/spectrum-phy.h",
+				"src/spectrum/model/spectrum-propagation-loss-model.h",
+				"src/spectrum/model/spectrum-transmit-filter.h",
+				"src/spectrum/model/phased-array-spectrum-propagation-loss-model.h",
+				"src/spectrum/model/spectrum-signal-parameters.h",
+				"src/spectrum/model/spectrum-value.h",
+				"src/spectrum/model/three-gpp-channel-model.h",
+				"src/spectrum/model/three-gpp-spectrum-propagation-loss-model.h",
+				"src/spectrum/model/trace-fading-loss-model.h",
+				"src/spectrum/model/tv-spectrum-transmitter.h",
+				"src/spectrum/model/waveform-generator.h",
+				"src/spectrum/test/spectrum-test.h",
+				"build/include/ns3/spectrum-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/spectrum",
+		"source" : "src/spectrum"
+	}
+}

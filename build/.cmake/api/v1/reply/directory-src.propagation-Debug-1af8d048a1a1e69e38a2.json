@@ -1,0 +1,78 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/propagation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-propagation-debug.dylib"
+			],
+			"targetId" : "propagation::@e1205667d4949730ed2e",
+			"targetIndex" : 69,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/propagation/model/channel-condition-model.h",
+				"src/propagation/model/cost231-propagation-loss-model.h",
+				"src/propagation/model/itu-r-1411-los-propagation-loss-model.h",
+				"src/propagation/model/itu-r-1411-nlos-over-rooftop-propagation-loss-model.h",
+				"src/propagation/model/jakes-process.h",
+				"src/propagation/model/jakes-propagation-loss-model.h",
+				"src/propagation/model/kun-2600-mhz-propagation-loss-model.h",
+				"src/propagation/model/okumura-hata-propagation-loss-model.h",
+				"src/propagation/model/probabilistic-v2v-channel-condition-model.h",
+				"src/propagation/model/propagation-cache.h",
+				"src/propagation/model/propagation-delay-model.h",
+				"src/propagation/model/propagation-environment.h",
+				"src/propagation/model/propagation-loss-model.h",
+				"src/propagation/model/three-gpp-propagation-loss-model.h",
+				"src/propagation/model/three-gpp-v2v-propagation-loss-model.h",
+				"build/include/ns3/propagation-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/propagation",
+		"source" : "src/propagation"
+	}
+}

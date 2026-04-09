@@ -1,0 +1,383 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./__/__/build-support/empty.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3tcp/ns3tcp-socket-writer.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./traced/traced-value-callback-typedef-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3tc/fq-cobalt-queue-disc-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3tc/fq-codel-queue-disc-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3tc/fq-pie-queue-disc-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3tc/pfifo-fast-queue-disc-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3wifi/wifi-issue-211-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3wifi/wifi-ac-mapping-test-suite.cc.o"
+		},
+		{
+			"path" : "src/test/CMakeFiles/test.dir/./ns3wifi/wifi-msdu-aggregator-test-suite.cc.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_dependencies",
+			"add_compile_options",
+			"process_options",
+			"add_definitions",
+			"include",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/test/CMakeLists.txt",
+			"build-support/macros-and-definitions.cmake",
+			"CMakeLists.txt",
+			"build-support/custom-modules/ns3-platform-support.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 178,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 221,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 223,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 226,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 618,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 543,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1155,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 139,
+				"parent" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 1150,
+				"parent" : 4
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 116,
+				"parent" : 3
+			},
+			{
+				"file" : 1,
+				"parent" : 13
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 14
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 14
+			},
+			{
+				"file" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 44,
+				"parent" : 17
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 483,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 545,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 620,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 1,
+				"line" : 857,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=c++20 -arch arm64 -fPIC   -Xclang -fno-pch-timestamp"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-error=deprecated-declarations"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 8,
+					"define" : "HAVE_LIBXML2"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "HAVE_SQLITE3"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "NS3_ASSERT_ENABLE"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "NS3_BUILD_PROFILE_DEBUG"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "NS3_LOG_ENABLE"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "PROJECT_SOURCE_PATH=\"/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45\""
+				},
+				{
+					"backtrace" : 18,
+					"define" : "__APPLE__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 19,
+					"path" : "/Users/daiyan/Codes/NS3_Project_v3.45/ns-3.45/build/include"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "copy_all_headers::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "test::@b7fcbc08bf8df37e9c1b",
+	"name" : "test",
+	"paths" : 
+	{
+		"build" : "src/test",
+		"source" : "src/test"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build-support/empty.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3tcp/ns3tcp-socket-writer.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/traced/traced-value-callback-typedef-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3tc/fq-cobalt-queue-disc-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3tc/fq-codel-queue-disc-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3tc/fq-pie-queue-disc-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3tc/pfifo-fast-queue-disc-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3wifi/wifi-issue-211-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3wifi/wifi-ac-mapping-test-suite.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/test/ns3wifi/wifi-msdu-aggregator-test-suite.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

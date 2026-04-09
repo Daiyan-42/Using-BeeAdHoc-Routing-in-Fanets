@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-lte
+Description: 
+URL: 
+Version: 3.45
+Requires:  ns3-spectrum ns3-buildings ns3-virtual-net-device ns3-point-to-point ns3-applications ns3-csma ns3-config-store
+Requires.private: 
+Cflags: -I"${includedir}"  -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr -I/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libxml2 -I/opt/homebrew/include
+Libs: -L"${libdir}" -lns3.45-lte-default  -lns3.45-spectrum-default -lns3.45-buildings-default -lns3.45-virtual-net-device-default -lns3.45-point-to-point-default -lns3.45-applications-default -lns3.45-csma-default -lns3.45-config-store-default
+Libs.private: -L"${libdir}" 

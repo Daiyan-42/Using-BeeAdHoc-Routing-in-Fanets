@@ -1,0 +1,71 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"build_lib"
+		],
+		"files" : 
+		[
+			"build-support/custom-modules/ns3-module-macros.cmake",
+			"src/flow-monitor/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libns3.45-flow-monitor-debug.dylib"
+			],
+			"targetId" : "flow-monitor::@6febb32c3c87917add27",
+			"targetIndex" : 35,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/ns3",
+			"paths" : 
+			[
+				"src/flow-monitor/helper/flow-monitor-helper.h",
+				"src/flow-monitor/model/flow-classifier.h",
+				"src/flow-monitor/model/flow-monitor.h",
+				"src/flow-monitor/model/flow-probe.h",
+				"src/flow-monitor/model/ipv4-flow-classifier.h",
+				"src/flow-monitor/model/ipv4-flow-probe.h",
+				"src/flow-monitor/model/ipv6-flow-classifier.h",
+				"src/flow-monitor/model/ipv6-flow-probe.h",
+				"build/include/ns3/flow-monitor-module.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/flow-monitor",
+		"source" : "src/flow-monitor"
+	}
+}
